@@ -1,0 +1,13 @@
+<div class='row well'>
+  <div class='col-md-2'></div>
+  <div class='col-md-8'>
+    <div class='row'>
+      <% %w|basic_information skills_checklist resume standard_application|.each do |application_step| %>
+        <ul class='nav nav-justified nav-pills'>
+          <li><%= link_to application_step.titleize, "job_forms/#{application_step}/#{current_user.category.code}" %></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+  <div class='col-md-2'></div>
+</div>

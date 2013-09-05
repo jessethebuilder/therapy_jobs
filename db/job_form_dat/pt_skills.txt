@@ -1,0 +1,148 @@
+rbg!!-jfx-!!Settings!!-jfx-!!No Experience;;;Up to 1 Year;;;1 to 3 Years;;;3+ Years
+General Acute Care
+Oncology
+ICU
+Neurological
+Cardiac Rehab
+Skilled Nursing
+Rehab Hospital or Clinic
+Pediatric Rehabilitation
+Home Health
+Physician's Office
+Industrial
+Inpatient Setting
+Outpatient Setting
+Sports Injury Clinic
+School System
+rbg!!-jfx-!!Patient Groups!!-jfx-!!0
+Neonates/Newborn (0-30 Days)
+Infant (30-356 Days)
+Toddler (1-3 Years)
+Preschool (3-5 Years)
+Older Child (12-18 Years)
+Adolescent
+Young Adult (19-39 Years)
+Middle Adult (39-64 Years)
+Older Adult (64+)
+Able to adapt care to age of normal growth and development
+Able to adapt method and language to developmental age
+Computerized Charting
+Standard Precautions/ Infection Control
+Hand Washing Techniques
+Patient Confidentiality & HIPPA
+JCAHO Patient Safety Goals
+rbg!!-jfx-!!Basic Skills!!-jfx-!!0
+Administration and Discharge
+Documentation According to JCAHO & Medicare Standards
+Patient and Family Teaching / Inservice Education
+Restraint Application, Criteria, and Safety
+Functional Analysis
+Functional Limitations
+Strength Analysis
+Movement Analysis
+Home Exercise Program
+Use of Assistive Technology
+Reflex Testing
+Sensory Testing
+Transfers
+Mobility Training
+Prosthetic/Orthotic Training
+Skeletal Integrity/ ROM/Posture
+Propicep/Kinesthesia
+Endurance
+FES
+Iontophoresis
+Skeletal Traction
+Hi-Volt
+Spray and Stretch
+Compression Garments
+Basic Medications
+Wound Care, Dressing
+ADLs
+Pain Assessment
+Use of Hoyer Lift
+Stand Pivot Transfer
+Wheel Chair Measurement/ Assessment
+Strength
+Goniometer
+Cervical-Lumbar Traction Units
+Safe Body Mechanisms and Ergonomics
+Blood Pressure
+Heart Rate
+Balance Assessment/Training
+Stump Wrapping
+Gait Training (4 point, 3 Point, 2 Point)
+Back Pain Control Measures
+Bed Mobility
+rbg!!-jfx-!!Modalities!!-jfx-!!0
+Continuous Passive Motion Machine (CPM)
+Hydrotherapy
+Whirlpool
+Hubbard Tank
+Therapeutic Pool
+Biofeedback
+TENS
+Muscle Stimulation
+Ultrasound: Diagnostic
+Ultrasound: Therapeutic
+Diathermy
+Cryotherapy
+Acupuncture
+Cervical Traction
+Lumbar Traction
+Massage
+Hot, Cold Pack
+Myofascial Release Technique
+Splinting
+Fluidotherapy: Paraffin
+Pediatrics
+Neurodevelopmental Testing
+Developmental Testing
+Orthotics
+Splinting
+Equipment Assessment: ADLs, Adaptive
+Positioning/Seating Systems
+Sensory Integration
+Autism
+Cerebral Palsy
+Learning Disabilities
+Mental Retardation
+Spina Bifida/Other NTD
+NICU Treatment
+rbg!!-jfx-!!Neurological!!-jfx-!!0
+CVA Rehabilitation
+Neuromuscular Re-Education
+Brain Injuries/Head Trauma
+Spinal Cord Injuries
+Functional Splinting
+Adaptive Equipment
+Comatose Patients
+Multiple Sclerosis
+Parkinson's Disease
+rbg!!-jfx-!!Sports Medicine!!-jfx-!!0
+Biodex
+Cybex
+Orthotron
+LIDO Back
+Nautillus/Eagle
+Bracing / Joint Immobilization
+Taping/Strapping
+rbg!!-jfx-!!Orthopedic!!-jfx-!!0
+Arthritis Programs
+Back Syndromes
+Hand Injury
+Fractures and Dislocations
+Joint Replacements: Hip, Knee, Shoulder
+Amputations: Upper and Lower Extremities
+Gait Training
+TMJ Dysfunction
+Mobilization Techniques
+Joint Arthroplasty and Precautions
+Fluidotherapy: Paraffin
+rbg!!-jfx-!!Other!!-jfx-!!0
+Burn Management
+Strength and Endurance Training
+Chest Physiotherapy
+Functional Capacity: Work Capacity, Physical Capacity, Pre-Employment Tests, Work Hardening
+Geriatrics
+Neuropsychiatric
