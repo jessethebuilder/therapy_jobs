@@ -1,0 +1,76 @@
+<div class='container col-12'>
+  <div class='row'>
+    <div class='col-md-6'>
+
+      <div class='row'>
+        <h1><%= @job.category.name %></h1>
+      </div>
+
+      <div class='row'>
+        <blockquote><%= @job.highlight %></blockquote>
+      </div>
+
+      <div class='row'>
+        </p><%= description_parser(@job) %></p>
+      </div>
+
+      <div class='row'>
+        <div class='well'>
+
+          <!--<p class='pull-right'>-->
+            <%= link_to 'Apply', apply_job_path(@job), :remote => true, :class => 'btn btn-primary' %>
+            <%= link_to 'Inquire', '#', class: 'btn btn-default' %>
+          <!--</p>-->
+          <!--<p><%#= facilities_parser(@job) %></p>-->
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-sm-6'>
+          <h3>Details:</h3>
+          <ul>
+            <li><strong>Start Date: </strong><%= @job.start_date.to_formatted_s(:long) %></li>
+            <li><strong>Duration: </strong>Pluralize!!<%#todo= pluralize(@job.duration, 'week') %></li>
+          </ul>
+        </div>
+
+        <div class='col-sm-6'>
+          <h3>Required Qualifications:</h3>
+          <ul><%= list_item_builder(requirements_parser(@job)) %></ul>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-sm-6'>
+          <h3>Benefits:</h3>
+          <ul><%= list_item_builder(@job.benefits) %></ul>
+        </div>
+
+        <div class='col-sm-6'>
+          <h3>Desired Qualifications:</h3>
+          <ul><%= list_item_builder(desirements_parser(@job)) %></ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class='col-md-5 panel col-md-offset-1'>
+      <div id='client_info' class='container'>
+        <div class='row'>
+          <%= link_to(image_tag(@client.logo.url(:medium_show)), client_path(@client)) unless @client.logo.to_s =~ /missing\.png/ %>
+          <h2><%= link_to @client.name, client_path(@client) %></h2>
+        </div>
+
+        <div class='well'>
+          <%= display_contact(@contact) %>
+        </div>
+
+        <div class='row'>
+          <%= render 'job_list' %>
+        </div><!--row-->
+
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,24 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col-lg-6'>
+      <div>
+        <%= image_tag @client.logo.url(:medium_show) unless @client.logo.to_s =~ /missing\.png/ %>
+        <h1><%= @client.name %></h1>
+      </div>
+
+      <div><blockquote>
+        <h4><%= number_to_phone(@client.phone) %></h4>
+        <h4><%= mail_to @client.email %></h4>
+        <h4><%= link_to @client.website %></h4>
+                this llook s like crap
+        <h4>FAX: <%= number_to_phone(@client.fax) %></h4>
+            </blockquote>
+      </div>
+
+    </div><!--lg-6-->
+
+     <%#= render 'jobs/job_list' %>
+
+
+  </div><!--row-->
+</div><!--container-->

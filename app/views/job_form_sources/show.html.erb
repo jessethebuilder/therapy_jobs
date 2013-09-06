@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @job_form_source.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @job_form_source.content %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @job_form_source.category_id %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @job_form_source.company_id %>
+</p>
+
+<%= link_to 'Edit', edit_job_form_source_path(@job_form_source) %> |
+<%= link_to 'Back', job_form_sources_path %>

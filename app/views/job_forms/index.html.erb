@@ -1,0 +1,33 @@
+<h1>Listing job_forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th>Category</th>
+      <th>Company</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @job_forms.each do |job_form| %>
+      <tr>
+        <td><%= job_form.name %></td>
+        <td><%= job_form.content %></td>
+        <td><%= job_form.category_id %></td>
+        <td><%= job_form.company_id %></td>
+        <td><%= link_to 'Show', job_form %></td>
+        <td><%= link_to 'Edit', edit_job_form_path(job_form) %></td>
+        <td><%= link_to 'Destroy', job_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Job form', new_job_form_path %>

@@ -1,0 +1,14 @@
+<div class='container'>
+  <table class='table table-condensed table-hover'>
+    <% @jobs.each do |job| %>
+      <% facility = job.facilities.first %>
+      <% address = facility.address %>
+      <tr id='<%= job_path(job) %>' class='linked_row'>
+        <td><%= job.category.name %></td>
+        <td><%= facility.read_attribute(:setting) %></td>
+        <td><%= "#{address.city}, #{address.state.upcase}" %></td>
+        <td><%= duration_parser(job, true) %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

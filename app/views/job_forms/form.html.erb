@@ -1,0 +1,45 @@
+<%#= render 'users/application_process' %>
+
+<%= form_tag(process_job_form_path(@job_form)) do %>
+  <% if @job_form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@job_form.errors.count, "error") %> prohibited this job_form from being saved:</h2>
+
+      <ul>
+      <% @job_form.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class='container col-8'>
+    <h1><%= @job_form.title %></h1>
+    <hr>
+    <%= @job_form.render_form %>
+    <div>
+      <br>
+      <%= submit_tag('Submit', :class => 'btn btn-primary') %>
+    </div>
+  </div>
+<% end %>
+
+<script type='text/javascript'>
+    $(document).ready(function(){
+        if($(window).width() >= 751){
+            $('.answer_side').hide();
+        } else {
+            $('.answers_row').hide();
+        };
+    });
+
+    $(window).resize(function(){
+        if($(window).width() >= 751){
+            $('.answer_side').hide();
+            $('.answers_row').show();
+        } else {
+            $('.answer_side').show();
+            $('.answers_row').hide();
+        };
+    });
+</script>
