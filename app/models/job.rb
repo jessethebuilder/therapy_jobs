@@ -1,34 +1,35 @@
 class Job < ActiveRecord::Base
   include CategoriesHelper
 
+  attr_accessor :main_facility
+
   belongs_to :contact
   belongs_to :client
 
   has_many :job_locations
-  has_many :facilities, :through => :job_locations
+  has_many :facilities, :after_add => :add_main_facility,
+           :before_remove => :remove_main_facility, :through => :job_locations
 
   has_one :categorization
   has_one :category, :through => :categorization
 
   validates :duration, :presence => true, :numericality => { :only_integer => true }
   validates :category, :presence => true
-  #validates :contact, :presence => true
 
-  validate :at_least_one_facility
-
-  before_create do
-    record_client_and_contact
-    self.main_facility_id = self.facilities.first
+  #validates :main_facility_id, :presence => true
+   #todo up and down
+  after_create do
+    #record_client_and_contact
   end
 
-  #def main_facility
-  #  Facility.find(main_facility_id)
-  #end
-  ##todo spec facility
-  #def main_facility=(facility)
-  #  update_attribute(:main_facility_id, facility.id)
-  #  self.facilities << facility
-  #end
+  def main_facility
+    Facility.find(main_facility_id)
+  end
+
+  def main_facility=(facility)
+    self.facilities << facility unless self.facilities.include?(facility)
+    write_attribute(:main_facility_id, facility.id)
+  end
 
   def start_date
     read_attribute(:state_date) || Date.today
@@ -50,19 +51,18 @@ class Job < ActiveRecord::Base
     self.category_join.where(:categories => {:code => category_codes})
   end
 
-  def highlight
-    read_attribute(:highlight) || facilities[0].description
-  end
-
   private
 
+  def add_main_facility(facility)
+    write_attribute(:main_facility_id, facility.id) unless self.main_facility_id
+  end
+
+  def remove_main_facility(facility)
+    self.main_facility_id = nil if self.main_facility_id == facility.id
+  end
+
   def record_client_and_contact
-    write_attribute(:contact_id, facilities[0].contact.id)
+    write_attribute(:contact_id, main_facility.contact.id)
     write_attribute(:client_id, contact.client.id)
   end
-
-  def at_least_one_facility
-    errors.add(:facilities, 'must have at least one location.') if self.facilities.empty?
-  end
-
 end

@@ -1,16 +1,15 @@
 class Facility < ActiveRecord::Base
   belongs_to :contact
+  belongs_to :setting
 
   has_many :job_locations
   has_many :jobs, :through => :job_locations
 
   has_one :address, :as => :addressable, :class_name => 'FarmAddress::Address'
 
-  has_one :setting, :as => :setting_defined_for
-
   validates :name, :presence => true
   validates :contact, :presence => true
-  #validates :setting, :presence => true
+  validates :setting, :presence => true
 
   validate :this_address
 

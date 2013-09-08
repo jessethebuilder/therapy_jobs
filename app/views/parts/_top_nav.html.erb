@@ -1,15 +1,41 @@
 <style>
-  body{ padding-top: 50px; }
+  body{
+      padding-top: 50px;
+  }
+
+  #top_nav{
+      /*padding-left: 50px;*/
+      /*padding-right: 50px;*/
+      /*height: 50px;*/
+      /*vertical-align: middle;*/
+  }
+
 </style>
 
-<div class='navbar navbar-fixed-top navbar-inverse' role='navigation'>
+<div id='top_nav' class='navbar navbar-fixed-top navbar-inverse' role='navigation'>
   <div class='navbar-header'>
-    <a class='navbar-brand' href='<%=root_path%>'>Real Therapy Jobs</a>
+
+
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top_nav_body">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <%= content_for :other_buttons %>
+
+    <%= link_to 'Real Therapy Jobs', root_path, :class => 'navbar-brand' %>
   </div>
 
-  <% if user_signed_in? %>
-   <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => 'navbar-text pull-right') %>
-  <% else %>
-    <%= link_to('Login', new_user_session_path, :class => 'navbar-text pull-right')  %>
-  <% end %>
+  <div id='top_nav_body' class='collapse navbar-collapse'>
+    <ul class='nav navbar-nav pull-right'>
+      <% if user_signed_in? %>
+          <!--todo adjust for -->
+          <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+      <% else %>
+          <li><%= link_to('Login', new_user_session_path, :class => 'navbar-text pull-right')  %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>

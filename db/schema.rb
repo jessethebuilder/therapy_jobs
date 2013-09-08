@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130906004140) do
+ActiveRecord::Schema.define(version: 20130907012317) do
 
   create_table "categories", force: true do |t|
     t.string   "code"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 20130906004140) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "description"
+    t.integer  "setting_id"
   end
 
   create_table "farm_address_addresses", force: true do |t|
@@ -149,8 +150,6 @@ ActiveRecord::Schema.define(version: 20130906004140) do
     t.string   "name"
     t.text     "description"
     t.text     "aliases"
-    t.string   "setting_defined_for_type"
-    t.integer  "setting_defined_for_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

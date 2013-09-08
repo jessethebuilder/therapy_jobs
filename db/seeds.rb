@@ -26,9 +26,7 @@ contact2 = Contact.create(:first_name => 'Jessica', :last_name => 'Farmer', :cli
 100.times do |counter|
   j = Job.new(:duration => Random.rand(0..26))
   j.category = Category.first(:offset => rand(Category.count))
-
-  #j.description = Faker::Lorem.paragraphs(paragraph_count = 2).join("\n\n")
-
+  j.description = Faker::Lorem.paragraphs(paragraph_count = 2).join("\n\n")
   j.benefits = ["Great Pay", "Great Friends", "Ethical", "Fun"].join("\n")
   j.requirements = ["Great Attitude", "TB Test", "Other Stuff"].join("\n")
   j.desirements = ["Even Better Attitude", "Management Experience", "Food Handler's Card"].join("\n")
@@ -40,29 +38,16 @@ contact2 = Contact.create(:first_name => 'Jessica', :last_name => 'Farmer', :cli
   this_contact = Contact.first(:offset => rand(Contact.count))
   Random.rand(1..3).times do
     f = Facility.new(:name => Faker::Company.name)
-    f.setting = Setting.first(:offset => rand(Setting.count))
-    @fs = f.setting
-    @fsv = @fs.valid?
-
-
     f.contact = this_contact
-    f.description = 'Located in the Lovely Wilderness of South Eastern Texas, Chikor Estates is a lovely place to retire. Pets welcome' if counter == 1
+    f.setting = Setting.first(:offset => rand(Setting.count))
+    f.description = Faker::Lorem.paragraphs(paragraph_count = Random.rand(1..3)).join("\n\n")
     f.address.city = Faker::Address.city
     f.address.state = FarmAddress::STATES.keys.sample
     f.address.zip = Faker::Address.zip_code
     f.save
-
-    @before = j.facilities.count
-    @be = f.setting
     j.facilities << f
-    @set = j.facilities.last.setting
-    @ba = f.setting
-    @fv = f.valid?
-    j.save
-    @after = j.facilities.count
-    nil
   end
-    j.save
+  j.save
 end
 
   #############Users###################################
@@ -72,7 +57,7 @@ u = User.create(:email => 'test@test.com', :password => 'testtest')
 
 
 
-j = JobForm.new
-j.job_form_source = checklist_setup('pt')
-j.user = u
-j.save
+jf = JobForm.new
+jf.job_form_source = checklist_setup('pt')
+jf.user = u
+jf.save

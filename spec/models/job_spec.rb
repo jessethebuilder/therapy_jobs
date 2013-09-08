@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe Job do
 
-  let(:job){ create :job }
-  let(:job2){ create :job }
+  let(:job){ build :job }
+  let(:job2){ build :job }
 
   describe 'Validations' do
     it{ should validate_presence_of :duration }
@@ -12,20 +12,12 @@ describe Job do
     it{ should have_one :category }
 
     describe 'Complex Validations' do
-        it 'must have at least one facility' do
-        job.facilities.delete_all
-        job.valid?.should == false
-        job.errors[:facilities].should_not be_nil
-        job.errors.messages[:facilities].match_at(/must have at least one location/).should_not be_nil
-      end
-
       it 'should validate for presence of category' do
         job.category = nil
         job.valid?.should == false
         job.errors[:category].should_not be_nil
         job.errors.messages[:category].match_at(/can't be blank/).should_not be_nil
       end
-
     end
   end #Associations and Validations
 
@@ -40,15 +32,34 @@ describe Job do
     end
   end
 
-  describe '#highlight' do
-    it 'should return #highlight if not nil' do
-      job.highlight = 'from job'
-      job.highlight.should == 'from job'
+  describe '#main_facility' do
+    let(:facility){ create :facility }
+    let(:facility2){ create :facility }
+
+    it{ should validate_presence_of :main_facility_id }
+
+    it 'should delete main_facility_id if facility is deleted' do
+      job.main_facility_id.should_not be_nil
+      job.facilities.delete_all
+      job.main_facility_id.should == nil
     end
 
-    it 'should return facilities[0]#description if #highlight is nil' do
-      job.facilities[0].description = 'from facility'
-      job.highlight.should == 'from facility'
+    it 'should set a main_facility if one does not exist' do
+      job.facilities.delete_all
+      job.main_facility_id.should == nil
+    end
+
+    specify '#main_facility should return the facility that corresponds to the id in #main_facility_id, which in this
+            case is set upon instantiation and adding a facility in factory' do
+      job.main_facility.should == job.facilities[0]
+    end
+
+    specify 'adding though #main_facility= should add new facility to #facilities UNLESS facility already is associated' do
+      job.save
+      job.main_facility.should_not be_nil
+      expect{ job.main_facility = facility }.to change{ job.facilities.count }.by(1)
+      expect{ job.main_facility = facility2 }.to change{ job.facilities.count }.by(1)
+      expect{ job.main_facility = facility }.to_not change{ job.facilities.count }
     end
   end
 

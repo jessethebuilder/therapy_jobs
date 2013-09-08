@@ -18,11 +18,22 @@
 
 //= require_tree .
 
+function header_height_setter(header_selector){
+    $(document).ready(function(){
+        $('body').css('padding-top', header_height(header_selector));
+//        alert(header_height(header_selector));
+//        alert($(header_selector).height());
+//        alert($('#top_nav').height());
+    });
+
+    $(window).resize(function(){
+        $('body').css('padding-top', header_height(header_selector));
+    });
+};
+
+function header_height(header_selector){
+    return $(header_selector).height() + $('#top_nav').height();
+};
 
 
-$(document).on('click', '.linked_row', function(){
-    //linked_row (<tr>) needs to have an id that evaluates to a url, such as id='job/1'
-    var id = $(this).closest('tr').attr('id');
-    window.location = id;
-});
 

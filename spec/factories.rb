@@ -18,10 +18,7 @@ FactoryGirl.define do
     contact
 
     after(:build, :create) do |job, evaluator|
-      f = build(:facility, :contact => nil)
-      c = job.contact
-      c.facilities << f #create(:facility)
-      job.facilities << job.contact.facilities
+      job.facilities << create(:facility)
     end
 
     factory :standard_job do
