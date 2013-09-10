@@ -1,24 +1,20 @@
-<%= form_tag(process_job_form_path(@job_form)) do %>
+<style>
+  body{ padding-bottom: 70px; }
+</style>
 
-  <% if @job_form.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@job_form.errors.count, "error") %> prohibited this job_form from being saved:</h2>
-
-      <ul>
-      <% @job_form.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<%= form_tag(process_job_form_path(@job_form), :id => 'job_form') do %>
   <div id='job_form' class='container col-10'>
-    <h1><%= @job_form.title %></h1>
+    <h1><%= @job_form.source.title %></h1>
     <hr>
-    <%= @job_form.render_form %>
+    <%= render_form(@job_form) %>
     <div>
       <br>
-      <%= submit_tag('Submit', :class => 'btn btn-primary') %>
+      <div class="navbar navbar-default navbar-fixed-bottom">
+        <ul class='nav navbar'>
+          <li><%= link_to 'Save', process_job_form_path(@job_form, :novalidate => true), :class => 'btn btn-warning' %></li>
+          <li><%= submit_tag('Submit', :class => 'btn btn-primary') %></li>
+        </ul>
+      </div>
     </div>
   </div>
 <% end %>
@@ -44,5 +40,15 @@
 
     $(document).ready(function(){
         header_height_setter();
+    });
+
+    $(document).keypress(function(e){
+        if(e.which == 13){
+            $('#job_form').submit();
+        }
+    });
+    $(document).on('click', 'input[type=radio]', function(){
+        $(this).closest('div.row').removeClass('row_error');
+        $(this).closest('div.row').addClass('row_success');
     });
 </script>

@@ -2,31 +2,19 @@ module JobFormsHelper
   include ActionView::Helpers::FormTagHelper
   include ActiveSupport::Inflector
 
+  mattr_accessor :form
   mattr_accessor :rb_count
 
-  def category_name
-    self.job_form_source.category.name
-  end
-
-  def source_name
-    @source_name ||= self.job_form_source.name
-  end
-
-  def title
-    html = source_name.titleize
-    html += ": #{category_name}" if job_form_source.category
-    html.html_safe
-  end
-
-  def render_form
-    set_up
+  def render_form(form)
+    set_up(form)
     html = ''
-    self.job_form_source.content.each_line { |line| html += render_line(line) }
+    form.source.content.each_line { |line| html += render_line(line) }
     html.html_safe
   end
 
-  def set_up
+  def set_up(form)
     @rb_count = 0
+    @form = form
   end
 
   def render_line(line)
@@ -41,11 +29,17 @@ module JobFormsHelper
   end
 
   def render_rbg
-    html = "<div class='row form-inline light_border'>\n"
+    html = "<div class='row form-inline light_border"
+    if @form.q_a_hash.keys.include?(@question)
+      html += " row_success"
+    else
+      html += " row_error" if @form.source.must_be_complete && params[:show_errors] == 'true'
+    end
+    html += "'>\n"
     html += "<div class='col-sm-4'><strong>#{@question}</strong></div>\n"
     @answers.each do |answer|
       html += "\t<div class='col-sm-2'>"
-        html += radio_button_tag(@question, answer, q_a_hash[@question] == answer, :id => "rb#{@rb_count}")
+        html += radio_button_tag(@question, answer, @form.q_a_hash[@question] == answer, :id => "rb#{@rb_count}")
         html += "<label for='rb#{@rb_count}' class='answer_side'><small>&nbsp;#{answer}</small></label>"
       html += "</div>\n"
       @rb_count += 1
@@ -83,9 +77,9 @@ module JobFormsHelper
 
   def parse_answers(answers)
     if /\A\d+\Z/ =~ answers
-      ret = saved_answers[Integer(answers)]
+      ret = @form.saved_answers[Integer(answers)]
     else
-      saved_answers << answers
+      @form.saved_answers << answers
       ret = answers
     end
     ret.split(JobFormSource::SUB_DEL)

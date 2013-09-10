@@ -7,10 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= render 'parts/top_nav' %>
-
-<%= yield %>
-
+  <%= render 'parts/top_nav' %>
+  <%= render 'parts/the_flash' %>
+  <%= yield %>
 </body>
 </html>

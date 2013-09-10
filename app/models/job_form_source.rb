@@ -16,5 +16,9 @@ class JobFormSource < ActiveRecord::Base
     self.client_id = self.contact.client_id
   end
 
-
+  def title
+    str = name.titleize
+    str += ": #{category.name}" if category
+    str
+  end
 end

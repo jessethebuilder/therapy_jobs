@@ -14,7 +14,16 @@
  *= require_tree .
  */
 
-
 .light_border{
   border-bottom: 1px lightgrey solid;
+}
+
+.row_success{
+  background: rgb(16, 201, 19);
+  background: rgba(16, 201,   19, .5);
+}
+
+.row_error{
+  background-color: rgb(230, 31, 9);
+  background-color: rgba(230, 31, 9, .5);
 }

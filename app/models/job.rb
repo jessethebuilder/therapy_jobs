@@ -51,6 +51,8 @@ class Job < ActiveRecord::Base
     self.category_join.where(:categories => {:code => category_codes})
   end
 
+
+
   private
 
   def add_main_facility(facility)

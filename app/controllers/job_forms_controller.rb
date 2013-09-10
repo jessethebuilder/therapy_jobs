@@ -40,8 +40,13 @@ class JobFormsController < ApplicationController
 
   def process_form
     @job_form.save_answers(params).save
-    #todo
-    redirect_to root_path
+    if @job_form.validate_form
+      redirect_to root_path
+    else
+      flash[:alert] = 'Please fill out the form completely.'
+      redirect_to fill_out_job_forms_path(:name => @job_form.source.name,
+                                          :code => @job_form.source.category.code, :show_errors => true)
+    end
   end
 
   def create

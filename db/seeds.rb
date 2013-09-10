@@ -59,5 +59,6 @@ u = User.create(:email => 'test@test.com', :password => 'testtest')
 
 jf = JobForm.new
 jf.job_form_source = checklist_setup('pt')
+jf.job_form_source.must_be_complete = true
 jf.user = u
 jf.save

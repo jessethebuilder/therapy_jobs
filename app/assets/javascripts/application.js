@@ -21,16 +21,11 @@
 function header_height_setter(header_selector){
     $(document).ready(function(){
         $('body').css('padding-top', header_height(header_selector));
-//        alert(header_height(header_selector));
-//        alert($(header_selector).height());
-//        alert($('#top_nav').height());
     });
-
     $(window).resize(function(){
         $('body').css('padding-top', header_height(header_selector));
     });
 };
-
 function header_height(header_selector){
     return $(header_selector).height() + $('#top_nav').height();
 };
