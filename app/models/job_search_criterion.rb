@@ -2,18 +2,26 @@ class JobSearchCriterion < ActiveRecord::Base
   include Hacks
 
   belongs_to :user
-
-  validates :user, :presence => true
+  #todo spec
+  has_many :location_searches, :dependent => :destroy
 
   serialize :order_on, Hash
   serialize :search_on, Hash
   serialize :recent_jobs, Array
 
-  serialize :states
-  serialize :categories
+  serialize :states, Array
+  serialize :categories, Array
+  serialize :settings, Array
 
   def search
     category_search
+  end
+
+
+
+  def self.delete_abandoned
+    #todo spec
+    self.where("user_id = ?", nil).where("updated_at > ?", 3.days.ago).delete_all
   end
 
   private

@@ -76,3 +76,5 @@ gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/
 
 gem 'farm_address', :path => 'C:\Users\jf\Desktop\jesseweb\farm_address'
 gem 'farm_twitter_bootstrap', :path => 'C:\Users\jf\Desktop\jesseweb\farm_twitter_bootstrap'
+
+gem 'whenever', :require => false

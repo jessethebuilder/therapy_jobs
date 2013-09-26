@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130909073635) do
+ActiveRecord::Schema.define(version: 20130926073131) do
 
   create_table "categories", force: true do |t|
     t.string   "code"
@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(version: 20130909073635) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "label"
+    t.float    "search_radius"
   end
 
   create_table "job_form_sources", force: true do |t|
@@ -125,6 +126,7 @@ ActiveRecord::Schema.define(version: 20130909073635) do
     t.datetime "updated_at"
     t.text     "states"
     t.text     "categories"
+    t.text     "settings"
   end
 
   create_table "jobs", force: true do |t|
@@ -144,6 +146,14 @@ ActiveRecord::Schema.define(version: 20130909073635) do
     t.text     "highlight"
     t.integer  "client_id"
     t.integer  "main_facility_id"
+  end
+
+  create_table "location_searches", force: true do |t|
+    t.float    "search_radius"
+    t.boolean  "active",                  default: true
+    t.integer  "job_search_criterion_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "settings", force: true do |t|

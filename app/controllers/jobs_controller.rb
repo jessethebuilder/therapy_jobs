@@ -1,17 +1,11 @@
 class JobsController < ApplicationController
+  include ApplicationHelper
   before_action :set_job, only: [:show, :edit, :update, :destroy, :apply]
 
   # GET /jobs
   # GET /jobs.json
   def index
     @jobs = Job.all
-
-    if user_signed_in?
-      @jsc = current_user.job_search_criterion
-    else
-      @jsc = JobSearchCriterion.new(:temporary => true)
-      @jsc.save
-    end
   end
 
   # GET /jobs/1

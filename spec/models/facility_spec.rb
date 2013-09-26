@@ -32,7 +32,7 @@ describe Facility do
     it{ should have_many :jobs }
     it{ should belong_to :contact }
     it{ should have_one :address}
-    it{ should have_one :setting }
+    it{ should belong_to :setting }
 
     describe '#address' do
       specify 'it should create an address before save' do

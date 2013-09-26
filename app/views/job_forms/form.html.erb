@@ -9,11 +9,13 @@
     <%= render_form(@job_form) %>
     <div>
       <br>
-      <div class="navbar navbar-default navbar-fixed-bottom">
-        <ul class='nav navbar'>
-          <li><%= link_to 'Save', process_job_form_path(@job_form, :novalidate => true), :class => 'btn btn-warning' %></li>
-          <li><%= submit_tag('Submit', :class => 'btn btn-primary') %></li>
-        </ul>
+      <div class="navbar navbar-inverse navbar-fixed-bottom">
+        <p class='pull-right'>
+          <!--toto create controller actions for save -->
+           <%= link_to 'Reset', reset_job_form_path(@job_form), :class => 'btn btn-danger' %>
+           <%= link_to 'Save', process_job_form_path(@job_form), :class => 'btn btn-warning' %>
+           <%= submit_tag('Submit', :class => 'btn btn-primary') %>
+        </p>
       </div>
     </div>
   </div>
@@ -38,15 +40,8 @@
         };
     });
 
-    $(document).ready(function(){
-        header_height_setter();
-    });
+    submit_on_enter('#job_form');
 
-    $(document).keypress(function(e){
-        if(e.which == 13){
-            $('#job_form').submit();
-        }
-    });
     $(document).on('click', 'input[type=radio]', function(){
         $(this).closest('div.row').removeClass('row_error');
         $(this).closest('div.row').addClass('row_success');

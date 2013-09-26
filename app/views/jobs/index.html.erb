@@ -1,47 +1,33 @@
-<style>
-    #header_row{
-        margin-top: 50px;
-    }
-
-    .job_row{
-        margin-right: 50px;
-        cursor: pointer;
-    }
-    .selected{
-        background-color: #f5f5f5;
-    }
-    body{
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    #header_row_body{
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-</style>
-
-<div id='header_row' class='row well well-sm navbar-fixed-top collapse'>
-  <div id='header_row_body'>
-    <div class='col-sm-2'><h4>Title</h4></div>
-    <div class='col-sm-2'><h4>City</h4></div>
-    <div class='col-sm-2'><h4>State</h4></div>
-    <div class='col-sm-2'><h4>Settings</h4></div>
-    <div class='col-sm-2'><h4>Start Date</h4></div>
-    <div class='col-sm-2'><h4>Duration</h4></div>
+<% if known_user? %>
+  <div class='well well-sm centered'>
+    <%= link_to('Search Jobs', edit_job_search_criterion_path(jsc), :remote => true, :class => 'btn btn-primary') %>
   </div>
+<% else %>
+  <%= render 'parts/hero_unit_alpha' %>
+<% end %>
+
+<div class='container'>
+  <div class='container col-md-8'>
+    <% @jobs.each do |job| %>
+      <div id='<%= job.id %>' class='row job_row light_border'>
+        <div class='col-sm-2'><strong><%= job.category.name %></strong></div>
+        <div class='col-sm-2 hidden-xs'><%= job.main_facility.address.city %></div>
+        <div class='col-sm-2 hidden-xs'><%= job.main_facility.address.full_state %></div>
+        <div class='col-sm-2 visible-xs'><%= "#{job.main_facility.address.city}, #{job.main_facility.address.state.upcase }" %></div>
+        <div class='col-sm-2'><%= job.main_facility.setting.name %></div>
+        <div class='col-sm-2'><%= job.start_date %></div>
+        <div class='col-sm-2'><%= job.duration %> plurn</div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class='container panel col-md-3 col-md-offset-1'>
+
+  </div>
+
 </div>
 
-<% @jobs.each do |job| %>
-  <div id='<%= job.id %>' class='row job_row light_border'>
-    <div class='col-sm-2'><strong><%= job.category.name %></strong></div>
-    <div class='col-sm-2'><%= job.main_facility.address.city %></div>
-    <div class='col-sm-2'><%= job.main_facility.address.full_state %></div>
-    <div class='col-sm-2'><%= job.main_facility.setting.name %></div>
-    <div class='col-sm-2'><%= job.start_date %></div>
-    <div class='col-sm-2'><%= job.duration %> plurn</div>
-  </div>
-<% end %>
+
 
 <% content_for :other_buttons do %>
     <button type='button' class='navbar-toggle btn-warning' data-toggle='data-collapse' data-target='#header_row'>
@@ -52,86 +38,7 @@
 
 
 <script type='text/javascript'>
-    $('.job_row').hover(function(){
-        $(this).addClass('selected');
-    }, function(){
-         $(this).removeClass('selected');
-    });
-
     $(document).ready(function(){
-        header_height_setter('#header_row');
-    });
-
-    $(document).on('click', '.job_row', function(){
-        var id = $(this).attr('id');
-        window.location = 'jobs/' + id;
-    });
-
-    $('#top_nav_body').on('shown-bs-collapse', function(){
-      $('#header_row').css('margin-top', $('#top_nav_body').height());
-        alert('xl');
-    });
-
-    $('#top_nav_body').on('hide-bs-collapse', function(){
-        $('#header_row').css('margin-top', $('#top_nav').height());
+        make_selectable('.job_row', 'jobs/');
     });
 </script>
-
-
-
-
-
-
-
-<!--<table id='job_table' class='table table-hover'>-->
-
-<!--<%#= form_for @jsc, :remote => true do |f| %>-->
-<!--<tr class='search_row'>-->
-<!--<td id='category_search'>-->
-<!--<%#= f.select :categories, categories_for_select, {}, {:multiple => true, :size => 5} %>-->
-<!--<p class='help-block'>Hold CTRL to select multiple</p>-->
-<!--<%#= f.check_box :include_management, :id => 'include_management' %>-->
-<!--<%#= label :include_management, 'Include Management?', :for => 'include_management' %>-->
-
-<!--</td>-->
-
-<!--<td></td>-->
-<!--<td></td>-->
-<!--<td></td>-->
-<!--<td></td>-->
-<!--<td></td>-->
-
-<!--</tr>-->
-
-
-<!--<tr class='search_toggle_row well'>-->
-<!--<td colspan='6'>-->
-<!--<span id='search_options' class='btn btn-primary btn-sm pull-right'>Search Options</span>-->
-<!--<%#= f.submit 'Search', :id => 'search', :class => 'btn btn-primary btn-sm pull-right' %>-->
-<!--</td>-->
-<!--</tr>-->
-<!--<%# end %>-->
-
-<!--</table>-->
-
-<!--<script>-->
-<!---->
-
-//    $(document).on('click', '#search_options', function(){
-//        $('.search_row').show();
-//        $('#search_options').hide();
-//        $('#search').show();
-//    });
-//
-//    $(document).on('click', '#search', function(){
-//        $('.search_row').hide();
-//        $('#search').hide();
-//        $('#search_options').show();
-//    });
-//
-//    $(document).ready(function(){
-//        $('.search_row').hide();
-//        $('#search').hide();
-//    });
-//
-<!--</script>-->

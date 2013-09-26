@@ -18,17 +18,33 @@
 
 //= require_tree .
 
-function header_height_setter(header_selector){
-    $(document).ready(function(){
-        $('body').css('padding-top', header_height(header_selector));
+function make_selectable(selector, path){
+    $(selector).hover(function(){
+        $(this).addClass('selected');
+    }, function(){
+        $(this).removeClass('selected');
     });
-    $(window).resize(function(){
-        $('body').css('padding-top', header_height(header_selector));
-    });
-};
-function header_height(header_selector){
-    return $(header_selector).height() + $('#top_nav').height();
+    make_linkable(selector, path);
 };
 
+function make_linkable(selector, path){
+    $(document).on('click', selector, function(){
+        var id = $(this).attr('id');
+        window.location = path + id;
+    });
+};
 
+//destroys any element with the id 'tb_modal' when the modal.hidden event fires
+$('#tb_modal').on('hidden.bs.modal', function(){
+    $(this).detach();
+});
 
+function submit_on_enter(form_selector){
+    $(document).keypress(function(e){
+        if(e.which == 13){
+            $(form_selector).submit();
+        }
+    });
+};
+
+//add some sy

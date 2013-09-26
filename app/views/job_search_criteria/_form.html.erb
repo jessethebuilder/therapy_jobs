@@ -1,0 +1,90 @@
+<style>
+  #job_search{
+      padding-left: 50px;
+      padding-right: 50px;
+  }
+
+</style>
+
+<div id='job_search' class='well'>
+  <div class='container'>
+    <%= form_for @location_search, :id => 'job_search_form', :role => 'form' do |f| %>
+      <%= fields_for @location_search.address  do |addr| %>
+
+        <!--<div class='form-group'>-->
+          <!--<div class='row'>-->
+            <!--<h3>Search for all jobs in: <small>(select as many options as you like)</small></h3>-->
+            <!--<div class='col-sm-3'>-->
+              <!--<%#= f.label :states %>-->
+              <!--<%#= f.select :states, states_for_select, {}, {:multiple => true, :class => 'form-control'} %>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+
+        <!--<hr>-->
+
+        <!--<div class='form-group'>-->
+          <div class='row'>
+            <h3>Search a specific location within:<small></small></h3>
+
+            <div class='form-group col-md-2'>
+              <%= addr.number_field :search_radius, :min => 5, :step => 5, :class => 'form-control', :placeholder => 'Miles' %>
+            </div>
+
+            <div class='form-group col-md-1'>
+              <p class='form-control-static centered'><strong>of</strong></p>
+            </div>
+
+            <div class='form-group col-md-2'>
+              <%= addr.text_field :city, :class => 'form-control', :placeholder => 'City' %>
+            </div>
+
+            <div class='form-group col-md-2'>
+              <%= addr.select :state, states_for_select, {:prompt => 'State'}, {:class => 'form-control'} %>
+            </div>
+
+            <div class='form-group col-md-1'>
+              <p class='form-control-static centered'><strong>OR</strong></p>
+            </div>
+
+            <div class='form-group col-md-2'>
+              <%= addr.text_field :zip, :class => 'form-control', :placeholder => 'Zip'  %>
+            </div>
+
+            <div class='form-group col-md-2'>
+              <%= addr.submit 'Search', :class => 'form-control btn btn-primary' %>
+            </div>
+
+          <!--</div>-->
+
+        </div>
+
+          <div class='row'>
+            <h3>Location Searches</h3>
+
+            <% @job_search_criterion.location_searches.each do |location| %>
+              <ul>
+                <li>
+                  <%= location.express_address %>
+                </li>
+              </ul>
+            <% end %>
+          </div>
+      </div>
+    <% end %>
+
+      <hr>
+    <!--<div class='row'>-->
+      <%#= f.submit 'Search Jobs', :class => 'btn btn-primary' %>
+      <%#= link_to 'Reset Search', jsc, :method => :delete, :class => 'btn btn-danger pull-right',
+                                :data => {:confirm => 'Reset your search?'} %>
+    <!--</div>-->
+  <% end %>
+</div>
+
+<script>
+    submit_on_enter('#job_search_form');
+
+</script>
+
+

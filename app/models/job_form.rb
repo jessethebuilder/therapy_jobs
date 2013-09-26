@@ -14,8 +14,6 @@ class JobForm < ActiveRecord::Base
     @saved_answers ||= []
   end
 
-
-
   def save_answers(hash)
     new_hash = {}
     hash.each do |k, v|

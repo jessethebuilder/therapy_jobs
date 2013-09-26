@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!
 
-  def show
-    @user = current_user
+  def log_in
   end
+
+  def sign_up
+
+  end
+
 end

@@ -1,6 +1,6 @@
 class JobFormsController < ApplicationController
   before_filter :authenticate_user!
-  before_action :set_job_form, only: [:show, :edit, :update, :destroy, :process_form]
+  before_action :set_job_form, only: [:show, :edit, :update, :destroy, :process_form, :reset]
 
 
   # GET /job_forms
@@ -32,10 +32,16 @@ class JobFormsController < ApplicationController
   def fill_out
     @rb_count = 0
     @job_form = JobForm.for_user(current_user, params[:name], params[:code])
-
     respond_to do |format|
       format.html{ render :action => 'form'}
     end
+  end
+
+  def reset
+    name = @job_form.source.name
+    code = @job_form.source.category.code
+    @job_form.delete
+    render fill_out_job_forms_path(:name => name, :code => code)
   end
 
   def process_form
@@ -48,6 +54,8 @@ class JobFormsController < ApplicationController
                                           :code => @job_form.source.category.code, :show_errors => true)
     end
   end
+
+
 
   def create
     @job_form = JobForm.new(job_form_params)
