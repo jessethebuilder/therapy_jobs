@@ -5,7 +5,11 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all
+    if known_user?
+      @jobs = current_jsc.all_search
+    else
+      @jobs = Job.all
+    end
   end
 
   # GET /jobs/1

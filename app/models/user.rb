@@ -6,13 +6,11 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  #validates :this_type, :presence => true, :inclusion => { :in => USER_TYPES }
-  #validate :at_least_one_category
-
   has_many :job_forms
 
   has_many :categories, :as => :categorization
-  has_one :job_search_criterion
+
+  has_one :job_search_criterion, :dependent => :destroy
 
   scope :candidates, -> { where(:type => 'candidate') }
 
@@ -25,10 +23,4 @@ class User < ActiveRecord::Base
   end
 
   private
-
-  def at_least_one_category
-    errors.add(:categories, 'cant be blank') if self.categories.empty?
-  end
-
-
 end

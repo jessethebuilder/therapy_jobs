@@ -1,6 +1,6 @@
 module ApplicationHelper
   include FarmTwitterBootstrap
-  include FarmAddress::AddressesHelper
+  #include FarmAddress::AddressesHelper
 
   def resource_name
     :user
@@ -14,38 +14,38 @@ module ApplicationHelper
     @devise_mapping ||= Devise.mappings[:user]
   end
 
-  def jsc
-    if user_signed_in?
-      @jsc ||= current_user.job_search_criterion
-    else
-      @jsc ||= jsc_for_unknown
-    end
-  end
-
   def known_user?
     user_signed_in? || session[:jsc_id]
   end
 
-  private
-
-  def jsc_for_unknown
-    jsc = nil
-    if session[@jsc_id]
-      jsc = JobSearchCriterion.find(@jsc_id) if JobSearchCriterion.exists?(@jsc_id)
+  def current_jsc
+    if user_signed_in?
+      jsc = current_user.job_search_criterion
+    elsif session[:jsc_id]
+      jsc = JobSearchCriterion.where(:id => session[:jsc_id]).first
+    else
+      jsc = nil
     end
-    unless jsc
-      jsc = JobSearchCriterion.new
-      jsc.save
-      session[@jsc_id] = jsc.id
-    end
-    jsc
+    jsc || JobSearchCriterion.new
   end
 
-  #def list_item_builder(list, deliminator = "\n")
-  #  html = ''
-  #  list.split(deliminator).each do |item|
-  #    html += "<li>#{item}</li>"
-  #  end if list
-  #    html.html_safe
-  #end
+  def for_select(collection, id_method, value_method, selected_ids = nil)
+    options = collection.each.collect{ |item| [item.send(id_method), item.send(value_method)] }
+    if selected_ids
+      options_for_select(options, selected_ids)
+    else
+      options_for_select(options)
+    end
+  end
+
+  def line_items(items)
+    html = ''
+    collection = items.split("\n")
+    collection.each do |item|
+      html += "<li>#{item}</li>"
+    end
+    html.html_safe
+  end
+
 end
+

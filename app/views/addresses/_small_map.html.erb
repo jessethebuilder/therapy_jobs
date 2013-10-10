@@ -1,0 +1,24 @@
+<style type='text/css'>
+  #small_map_canvas{
+      margin-top: 20px;
+      height: 400px;
+  }
+</style>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQvVLO9p0a4qBe4GloXDALiQvyhRZC04A&sensor=false">
+</script>
+
+<script type='text/javascript'>
+  function initialize(){
+      var mapOptions = {
+            center: new google.maps.LatLng(<%= @address_to_map.latitude %>, <%= @address_to_map.longitude %>),
+            zoom: 7,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      var map = new google.maps.Map(document.getElementById('small_map_canvas'), mapOptions);
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+
+<div id='small_map_canvas'></div>

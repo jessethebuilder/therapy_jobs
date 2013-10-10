@@ -1,8 +1,4 @@
-<% if known_user? %>
-  <div class='well well-sm centered'>
-    <%= link_to('Search Jobs', edit_job_search_criterion_path(jsc), :remote => true, :class => 'btn btn-primary') %>
-  </div>
-<% else %>
+<% unless known_user? %>
   <%= render 'parts/hero_unit_alpha' %>
 <% end %>
 
@@ -26,16 +22,6 @@
   </div>
 
 </div>
-
-
-
-<% content_for :other_buttons do %>
-    <button type='button' class='navbar-toggle btn-warning' data-toggle='data-collapse' data-target='#header_row'>
-      <span class="sr-only">Toggle job search options</span>
-      <span class='glyphicon glyphicon-search'></span>
-    </button>
-<% end %>
-
 
 <script type='text/javascript'>
     $(document).ready(function(){

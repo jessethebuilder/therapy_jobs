@@ -10,7 +10,7 @@ CATEGORIES.each do |k, v|
   Category.create(:code => k, :name => v )
 end
 
-address = FarmAddress::Address.new(:label => 'main_corporate', :street => '2829 Blue Springs Place',
+address = Address.new(:street => '2829 Blue Springs Place',
                                      :city => 'Wesley Chapel', :state => 'fl', :zip => '33544')
 client = Client.new(:name => 'Synergy Medical Staffing', :phone => '888-351-6628 x42')
 client2 = Client.new(:name => 'Other Recruiting Company', :phone => '1234568779')
@@ -42,7 +42,7 @@ contact2 = Contact.create(:first_name => 'Jessica', :last_name => 'Farmer', :cli
     f.setting = Setting.first(:offset => rand(Setting.count))
     f.description = Faker::Lorem.paragraphs(paragraph_count = Random.rand(1..3)).join("\n\n")
     f.address.city = Faker::Address.city
-    f.address.state = FarmAddress::STATES.keys.sample
+    f.address.state = Address::STATES.keys.sample
     f.address.zip = Faker::Address.zip_code
     f.save
     j.facilities << f

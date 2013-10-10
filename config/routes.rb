@@ -1,19 +1,28 @@
 TherapyJobs::Application.routes.draw do
+  resources :addresses
+
   devise_for :users
   get 'log_in', :to => 'users#log_in', :as => 'log_in'
   get 'sign_up', :to => 'users#sign_up', :as => 'sign_up'
 
   resources :categories
-  resources :job_search_criteria
+  resources :job_search_criteria do
+    resources :location_searches
+
+    collection do
+      get 'search', :to => 'job_search_criteria#search', :as => 'search'
+    end
+  end
+
+
   resources :facilities
   resources :clients
   resources :contacts
   resources :job_form_sources
 
-  resources :location_searches
 
 
-  mount FarmAddress::Engine => "/address"
+  #mount FarmAddress::Engine => "/"
 
   resources :jobs do
     member do

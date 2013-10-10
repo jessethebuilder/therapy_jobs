@@ -14,12 +14,17 @@ class LocationSearchesController < ApplicationController
     end
   end
 
+  def index
+    @location_searches = LocationSearch.all
+  end
+
   private
   def set_location_search
     @location_search = LocationSearch.find(params[:id])
   end
 
   def job_search_criterion_params
-    params.require(:location_search).permit(:active, :search_radius)
+    params.require(:location_search).permit(:active, :search_radius,
+                                    :address_attributes => [:city, :state, :zip])
   end
 end

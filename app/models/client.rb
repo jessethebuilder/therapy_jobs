@@ -3,7 +3,7 @@ class Client < ActiveRecord::Base
   has_many :jobs
   has_many :job_form_sources
 
-  has_many :addresses, :as => :addressable, :class_name => 'FarmAddress::Address'
+  has_many :addresses, :as => :addressable
 
   validates :name, :presence => true
   validates :phone, :presence => true

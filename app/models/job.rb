@@ -43,16 +43,6 @@ class Job < ActiveRecord::Base
     where('client_id = ?', client.id).order("updated_at DESC")
   end
 
-  def self.category_join
-    Job.joins(:category)
-  end
-
-  def self.with_these_categories(*category_codes)
-    self.category_join.where(:categories => {:code => category_codes})
-  end
-
-
-
   private
 
   def add_main_facility(facility)

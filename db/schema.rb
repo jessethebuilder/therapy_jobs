@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130926073131) do
+ActiveRecord::Schema.define(version: 20131009215010) do
+
+  create_table "addresses", force: true do |t|
+    t.integer  "addressable_id"
+    t.string   "addressable_type"
+    t.string   "street"
+    t.string   "street2"
+    t.string   "street3"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.boolean  "spammable"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", force: true do |t|
     t.string   "code"
@@ -72,24 +88,6 @@ ActiveRecord::Schema.define(version: 20130926073131) do
     t.integer  "setting_id"
   end
 
-  create_table "farm_address_addresses", force: true do |t|
-    t.integer  "addressable_id"
-    t.string   "addressable_type"
-    t.string   "street"
-    t.string   "street2"
-    t.string   "street3"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip"
-    t.float    "latitude"
-    t.float    "longitude"
-    t.boolean  "spammable",        default: true
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "label"
-    t.float    "search_radius"
-  end
-
   create_table "job_form_sources", force: true do |t|
     t.string   "name"
     t.text     "content"
@@ -125,8 +123,9 @@ ActiveRecord::Schema.define(version: 20130926073131) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "states"
-    t.text     "categories"
     t.text     "settings"
+    t.text     "categories"
+    t.text     "duration_types"
   end
 
   create_table "jobs", force: true do |t|
@@ -146,6 +145,7 @@ ActiveRecord::Schema.define(version: 20130926073131) do
     t.text     "highlight"
     t.integer  "client_id"
     t.integer  "main_facility_id"
+    t.string   "duration_type"
   end
 
   create_table "location_searches", force: true do |t|

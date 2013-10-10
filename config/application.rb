@@ -26,13 +26,15 @@ module TherapyJobs
                 'ot' => 'Occupational Therapist',
                 'slp' => 'Speech Language Pathologist',
                 'pta' => 'Physical Therapy Assistant',
-                'cota' => 'Certified Occupational Therapist',
+                'cota' => 'Certified Occupational Therapy Assistant',
                 'dor' => 'Director of Rehabilitation',
                 'rd' => 'Regional Director',
                 'pm' => 'Program Manager'
     }
 
     ::STANDARD_CATEGORIES = %w|pt ot slp pta cota|
+
+    ::DURATION_TYPES = ['Travel', 'Direct Hire', 'PRN']
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

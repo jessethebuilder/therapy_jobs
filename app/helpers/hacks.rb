@@ -133,16 +133,3 @@ class Array
   end
 
 end
-
-class ActiveRecord::Base
-
-  #def remove_blank_from_array_attributes(*attrs)
-  #  attrs.each do |attr|
-  #    if attr_val = self.send(:attr)
-  #      arr = eval(attr_val)
-  #      write_attribute(attr, arr.delete_if{ |i| i == '' })
-  #    end
-  #  end
-  #end
-
-end

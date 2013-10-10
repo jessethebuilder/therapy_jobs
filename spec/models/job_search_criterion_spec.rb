@@ -26,19 +26,26 @@ describe JobSearchCriterion do
   end
 
   describe 'Searches' do
-    let(:standard_job){ create :job_standard }
-    let(:job){ create :job }
+    let!(:job){ create :job }
+    let(:record_set){ JobSearchCriterion.send(:mega_join) }
 
-    describe 'category search' do
+    describe 'category_search(*categories)' do
       it 'should find all jobs that have a category' do
-        jsc.search_on[:category] = [job.category.code]
-        jobs = jsc.search
-        jobs.count.should == 1
-        jobs.first.should == job
+        category = create(:category)
         job2 = create(:job)
-        job2.set_category(job.category.code)
-        jobs = jsc.search
+        job2.category = category
+        jsc.categories << category.code
+
+        jobs = jsc.category_search(record_set)
+        jobs.count.should == 1
+        jobs.first.should == job2
+
+        job3 = create(:job)
+        job3.category = category
+
+        jobs = jsc.category_search(record_set)
         jobs.count.should == 2
+        jobs.count.should < Job.count
       end
 
     end

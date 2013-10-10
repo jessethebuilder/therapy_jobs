@@ -74,7 +74,9 @@ gem 'carrierwave'
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
 
-gem 'farm_address', :path => 'C:\Users\jf\Desktop\jesseweb\farm_address'
+#gem 'farm_address', :path => 'C:\Users\jf\Desktop\jesseweb\farm_address'
 gem 'farm_twitter_bootstrap', :path => 'C:\Users\jf\Desktop\jesseweb\farm_twitter_bootstrap'
 
 gem 'whenever', :require => false
+
+gem 'geocoder'
