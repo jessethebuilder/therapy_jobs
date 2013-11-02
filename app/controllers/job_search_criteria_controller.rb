@@ -21,10 +21,10 @@ class JobSearchCriteriaController < ApplicationController
 
   def create
     @job_search_criterion = JobSearchCriterion.new(job_search_criterion_params)
-    @j = job_search_criterion_params
     if @job_search_criterion.save
+      save_location_search(params)
       session[:jsc_id] = @job_search_criterion.id
-      @s = @job_search_criterion.states
+
       respond_to do |format|
         format.html{ redirect_to jobs_path }
         format.js
@@ -34,9 +34,10 @@ class JobSearchCriteriaController < ApplicationController
     end
   end
 
+
   def update
     if @job_search_criterion.update(job_search_criterion_params)
-      @j = job_search_criterion_params
+      save_location_search(params)
       redirect_to jobs_path
     else
       raise StandardError, 'do it!!!'
@@ -45,8 +46,15 @@ class JobSearchCriteriaController < ApplicationController
 
   def destroy
     @job_search_criterion.destroy
+    session[:jsc_id] = nil
+
+    if user_signed_in?
+      current_user.job_search_criterion = JobSearchCriterion.new()
+      current_user.save
+    end
+
     respond_to do |format|
-      format.html { redirect_to root_url }
+      format.html { redirect_to jobs_path }
       format.json { head :no_content }
     end
   end
@@ -63,6 +71,19 @@ class JobSearchCriteriaController < ApplicationController
                    :include_management, :location_searches_attributes => [:search_radius, :address_attributes])
     #params.require(:job_search_criterion).permit(:categories, :include_management, {:states => []}, :settings,
     #                                             :location_searches_attributes => [:search_radius, :address_attributes])
+  end
+
+  def save_location_search(params)
+    unless params[:job_search_criterion][:location_searches].first[:address_attributes][:address_string].blank?
+      @location_search = @job_search_criterion.location_searches.new(params[:job_search_criterion][:location_searches].first)
+      addr = params[:job_search_criterion][:location_searches].first[:address_attributes][:address_string]
+      @location_search.address.address_string = addr
+      @location_search.save
+      @location_search.address.save
+      true
+    else
+      false
+    end
   end
 
 end

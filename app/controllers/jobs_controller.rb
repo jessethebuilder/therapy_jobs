@@ -15,6 +15,8 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.json
   def show
+    @address = @job.main_facility.address
+
     @facility = @job.facilities[0]
     @contact = @facility.contact
     @client = @contact.client
@@ -22,6 +24,10 @@ class JobsController < ApplicationController
   end
 
   def apply
+
+  end
+
+  def flag
 
   end
 

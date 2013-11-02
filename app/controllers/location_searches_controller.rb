@@ -25,6 +25,6 @@ class LocationSearchesController < ApplicationController
 
   def job_search_criterion_params
     params.require(:location_search).permit(:active, :search_radius,
-                                    :address_attributes => [:city, :state, :zip])
+                                    :address_attributes => [:address_string])
   end
 end

@@ -1,0 +1,83 @@
+<div id='address_map'>
+  <style type='text/css'>
+    #map_canvas{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        height: 350px;
+        /*width: 100%;*/
+        /*padding: 0px;*/
+    }
+  </style>
+
+  <div class='row'>
+    <div class='form-group col-12'>
+      <div id='map_canvas'></div>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div id='map_from_address_tb' class='form-group col-sm-9' style='padding-left:0px'>
+      <%= label_tag :address_string, 'Full Address', :class => 'sr-only' %>
+      <%= text_field_tag :address_string, '', :class => 'form-control', :placeholder => 'Directions from -> City, ST or Zip or Address' %>
+    </div>
+    <div class='form-group col-sm-2'>
+      <%= link_to 'Get Directions', map_to_address_path(@address), :id => 'get_directions', :class => 'btn btn-primary' %>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQvVLO9p0a4qBe4GloXDALiQvyhRZC04A&sensor=false">
+  </script>
+
+  <script type='text/javascript'>
+    var addressLatLng = new google.maps.LatLng(<%= @address.latitude %>, <%= @address.longitude %>);
+
+    function initializeMap(){
+        var mapOptions = {
+              center: addressLatLng,
+              zoom: 7,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        address_map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: addressLatLng,
+            title: '<%= @address.label %>'
+        });
+        marker.setMap(address_map);
+    };
+    $(window).load(function(){
+        initializeMap();
+    });
+    $(document).ajaxComplete(function(){
+        initializeMap();
+    });
+
+    <% if @map_to_address %>
+      <% if @map_to_address.geocoded? %>
+        function placeSecondaryMarker(googleLatLng){
+              var secondaryMarker = new google.maps.Marker({
+                position: googleLatLng,
+                title: '<%= @map_to_address.address_string %>'
+            });
+           secondaryMarker.setMap(address_map);
+         };
+        $(document).ajaxComplete(function(){
+           var secondaryLatLng = new google.maps.LatLng(<%= @map_to_address.latitude %>, <%= @map_to_address.longitude %>);
+           placeSecondaryMarker(secondaryLatLng);
+        });
+      <% else %>
+        <% if @map_to_address.address_string.blank? %>
+          addError('#map_from_address_tb', '<strong>Please enter some sort of location ^^^<strong>');
+        <% else %>
+          addError('#map_from_address_tb', "Could not geolocate <strong><%= @map_to_address.address_string %></strong>");
+        <% end %>
+      <% end %>
+    <% end %>
+
+   linkBuilder('#get_directions', ['#address_string'])
+  </script>
+
+
+
+</div>

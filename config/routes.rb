@@ -1,13 +1,19 @@
 TherapyJobs::Application.routes.draw do
-  resources :addresses
+  resources :addresses do
+    member do
+      get 'map_to/(:address_string)', :to => 'addresses#map_to', :as => 'map_to'
+    end
+  end
 
   devise_for :users
   get 'log_in', :to => 'users#log_in', :as => 'log_in'
   get 'sign_up', :to => 'users#sign_up', :as => 'sign_up'
 
+
+  resources :location_searches
   resources :categories
   resources :job_search_criteria do
-    resources :location_searches
+
 
     collection do
       get 'search', :to => 'job_search_criteria#search', :as => 'search'
@@ -27,6 +33,7 @@ TherapyJobs::Application.routes.draw do
   resources :jobs do
     member do
       get 'apply', :to => 'jobs#apply', :as => 'apply'
+      get 'flag', :to => 'jobs#flag', :as => 'flag'
     end
   end
 

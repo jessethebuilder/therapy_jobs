@@ -1,24 +1,38 @@
 <div id='job_search' class='well'>
   <style>
       #job_search{
-          padding-left: 50px;
-          padding-right: 50px;
+          position: fixed;
+          top: 50px;
+          width: 100%;
+          z-index: 999;
+          overflow-y: scroll;
+          overflow-x: hidden;
+          height: 100%;
+          display: none;
+          padding-bottom: 50px;
       }
+      body{
+          overflow-y: hidden;
+      }
+
+
   </style>
 
   <div class='container'>
-    <div class='row'>
+    <div id='close_button margin_right' class='row'>
+      <% unless current_jsc.new_record? %>
+        <%= link_to 'Reset Search', job_search_criterion_path(current_jsc), :method => :delete,:class => 'btn btn-danger btn-sm' %>
+      <% end %>
       <button type='button' class='close pull-right'>close &times;&nbsp;&nbsp; </button>
     </div>
 
-    <hr>
-
     <%= form_for @job_search_criterion, :id => 'job_search_form', :role => 'form' do |f| %>
       <div class='row'>
-        <h3>Search All</h3>
+        <h3>Search Options</h3>
 
         <div class='form-group col-md-4'>
           <h4>Professions</h4>
+          <!-- todo 'Any' should be highlighted if no option is selected -->
           <%= f.select :categories, for_select(Category.standard, :name, :code, @job_search_criterion.categories), {},
                        {:size => '5', :class => 'form-control', :multiple => true} %>
 
@@ -34,83 +48,75 @@
                        {:size => '5', :class => 'form-control', :multiple => true} %>
         </div>
 
-        <div class='form-group col-md-2'>
-          <h4>States</h4>
-          <%= f.select :states, states_for_select(@job_search_criterion.states), {:include_blank => 'Any'},
-                      {:size => '5', :class => 'form-control', :multiple => true} %>
-        </div>
 
-        <div class='form-group col-md-2'>
-          <h4>Position Types</h4>
+        <div class='form-group col-md-3'>
+          <h4>Position&nbsp;Types</h4>
           <%= f.select :duration_types, options_for_select(DURATION_TYPES, @job_search_criterion.duration_types), {:include_blank => 'Any'},
                                                       {:size => 5, :class => 'form-control', :multiple => true} %>
         </div>
+
+        <div class='form-group col-md-2'>
+          <h4>States</h4>
+          <%= f.select :states, states_for_select(@job_search_criterion.states), {:include_blank => 'Any'},
+                       {:size => '5', :class => 'form-control', :multiple => true} %>
+        </div>
       </div>
 
-      <%#= f.fields_for "location_searches[]", LocationSearch.new do |loc| %>
 
-        <%#= loc.fields_for :address do |addr| %>
+      <%= f.fields_for "location_searches[]", LocationSearch.new do |loc| %>
+      <%#= form_for @job_search_criterion.location_searches.new, :remote => true do |loc| %>
+        <%= loc.fields_for :address do |addr| %>
 
-          <div class='row'>
-            <h3>Search a specific location within:<small></small></h3>
+          <div id='location_search' class='row'>
+            <h3>Add a specific location to search<small></small></h3>
 
             <div class='form-group col-md-2'>
-              <%#= loc.number_field :search_radius, :min => 5, :step => 5, :class => 'form-control', :placeholder => 'Miles' %>
+              <%= loc.label :search_radius, 'Search radius', :class => 'sr-only' %>
+              <%= loc.text_field :search_radius, :class => 'form-control', :placeholder => 'Miles' %>
             </div>
 
             <div class='form-group col-md-1'>
-              <p class='form-control-static centered'><strong>of</strong></p>
+              <p class='form-control-static centered'><strong>from</strong></p>
+            </div>
+
+            <div class='form-group col-md-3'>
+              <%= addr.label :address_string, 'Address', :class => 'sr-only' %>
+              <%= addr.text_field :address_string, :class => 'form-control', :placeholder => 'City, ST -or- Zip' %>
             </div>
 
             <div class='form-group col-md-2'>
-              <%#= addr.text_field :city, :class => 'form-control', :placeholder => 'City' %>
-            </div>
-
-            <div class='form-group col-md-2'>
-              <%#= addr.select :state, states_for_select, {:prompt => 'State'}, {:class => 'form-control'} %>
-            </div>
-
-            <div class='form-group col-md-1'>
-              <p class='form-control-static centered'><strong>OR</strong></p>
-            </div>
-
-            <div class='form-group col-md-2'>
-              <%#= addr.text_field :zip, :class => 'form-control', :placeholder => 'Zip'  %>
-            </div>
-
-            <div class='form-group col-md-2'>
-              <%= f.submit 'Search', :class => 'form-control btn btn-primary' %>
+              <%= loc.submit 'Add Location', :class => 'form-control btn btn-warning' %>
             </div>
           </div>
-
-          <div class='row'>
-          <h3>Location Searches</h3>
-
-          <% @job_search_criterion.location_searches.each do |location| %>
-            <ul>
-              <li>
-                <%= location.express_address %>
-              </li>
-            </ul>
-          <% end if @job_search_criterion.location_searches.count > 0 %>
         </div>
 
-        <%# end #addr %>
-      <%# end #loc %>
+        <% end #addr %>
+      <% end #loc %>
 
-      <hr>
-
+        <div class='row'>
+          <div class='col-md-10'></div>
+          <div class='form-group col-md-2 margin_right'>
+            <%= f.submit 'Search', :class => 'form-control btn btn-primary' %>
+          </div>
+        </div>
     <% end #form %>
 
   <script>
-      submit_on_enter('#job_search_form');
+      submitOnEnter('<%= "##{jsc_form_link}" %>');
 
-      $('#job_search_toggle').bind('click', false);
-
+      $('#job_search_toggle').click(function(e){
+          e.preventDefault();
+          $('<%= "##{jsc_form_link}" %>').submit();
+      });
+      $(document).ajaxComplete(function(){
+          $('#top_nav_body').collapse('hide');
+          $('#job_search').show(250);
+      });
       $('.close').click(function(){
-          $('#job_search_toggle').unbind('click', false);
-          $('#job_search').detach();
+          $('#job_search').hide(250, function(){
+            $('#job_search').detach();
+          });
       });
     </script>
   </div><!--container-->
-</div><!--job_search-->
+</div>

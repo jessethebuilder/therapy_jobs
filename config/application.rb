@@ -34,7 +34,7 @@ module TherapyJobs
 
     ::STANDARD_CATEGORIES = %w|pt ot slp pta cota|
 
-    ::DURATION_TYPES = ['Travel', 'Direct Hire', 'PRN']
+    ::DURATION_TYPES = ['Travel', 'Direct Hire', 'PRN (coming soon)']
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

@@ -1,5 +1,7 @@
 module Hacks
+
   include ActionView::Helpers::TextHelper
+
 
   def standard_description(job)
     html = "We are currently looking for #{articleator(job.category.name)} for a #{duration_parser(job)} in "
@@ -70,9 +72,7 @@ module Hacks
       if short == true
         return 'Contract'
       else
-        #todo
-        return 'Pluralize!!!'
-        #return "#{pluralize(job.duration, 'week')} contract"
+        return "#{pluralize(job.duration, 'week')} contract"
       end
     end
   end
@@ -111,10 +111,8 @@ module Hacks
     years = Integer(float)
     decimal_months = float - years
     months =  Integer((decimal_months * 12).round)
-    #todo
-    str = 'Pluralize!!'
-    #str = "#{pluralize(years, 'year')}"
-    #str += " and #{pluralize(months, 'month')}" unless months == 0
+    str = "#{pluralize(years, 'year')}"
+    str += " and #{pluralize(months, 'month')}" unless months == 0
     str
   end
 

@@ -14,18 +14,21 @@
  *= require_tree .
  */
 
+$success_color: rgb(0, 201, 13);
+$error_color: rgb(230, 31, 9);
+
 .light_border{
   border-bottom: 1px lightgrey solid;
 }
 
 .row_success{
-  background: rgb(16, 201, 19);
-  background: rgba(16, 201,   19, .5);
+  background: $success_color;
+  background: transparentize($success_color, 0.25);
 }
 
 .row_error{
-  background-color: rgb(230, 31, 9);
-  background-color: rgba(230, 31, 9, .5);
+  background-color: $error_color;
+  background-color: transparentize($error_color, 0.25);
 }
 
 .selected{
@@ -33,6 +36,29 @@
   cursor: pointer;
 }
 
+//Utility Styles
 .centered{
   text-align: center;
 }
+
+//Flash Style
+.the_flash{
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  padding: 5px;
+}
+.notice{
+  @extend .the_flash;
+  border-top-color: $success_color;
+  border-bottom-color: $success_color;
+  background-color: transparentize($success_color, 0.90);
+}
+.alert{
+  @extend .the_flash;
+  border-top-color: $error_color;
+  border-bottom-color: $error_color;
+  background-color: transparentize($error_color, 0.90);
+}
+

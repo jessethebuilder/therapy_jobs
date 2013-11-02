@@ -29,16 +29,44 @@ describe 'Job Search Requests' do
         visit '/jobs'
         click_link 'Search Jobs'
         within('#job_search') do
-          fill_in "#job_search_criterion_location_search_search_radius", :with => 100
-          fill_in "#job_search_criterion_location_search_address_attributes_city", :with => 'a city'
+          select 'Washington', :from => 'States'
           expect{ click_link 'Search' }.to change{ JobSearchCriterion.count }.by(1)
+          jsc = JobSearchCriterion.last
+          jsc.states.include?('wa').should be_true
         end
-
-        visit '/jobs'
-        page.should_not have_css('.jumbotron')
       end
     end
 
+  end
+
+  describe 'LocationSearches', :js => true do
+    it 'should save the a LocationSearch when a JobSearchCriterion is saved or updated, if one is specified' do
+      visit '/jobs'
+      click_link 'Search Jobs'
+     # within('#location_search') do
+        fill_in 'Address', :with => 'Sequim, WA'
+        #fill_in 'Search radius', :with => 200
+      #end
+      click_link 'Search'
+
+      lc = LocationSearch.last
+      lc.address.address_string.should == 'Sequim, WA'
+      lc.search_radius.should == 200
+
+      jsc = JobSearchCriterion.last
+      lc.job_search_criterion.should == jsc
+
+      click_link 'Search Jobs'
+      within('#location_search') do
+        fill_in 'Address', :with => 'Port Angeles, WA'
+        #fill_in 'Search radius', :with => 155
+      end
+      expect{ click_link 'Search' }.to change{ jsc.location_searches.count }.by(1)
+
+      lc = LocationSearch.last
+      lc.address.address_string.should == 'Port Angeles, WA'
+      lc.search_radius.should == 155
+    end
   end
 
 

@@ -36,7 +36,7 @@ class JobSearchCriterion < ActiveRecord::Base
   end
 
   def state_search(records)
-    query_records = records.where(:farm_address_addresses => {:state => self.states}) unless self.states.all_blank?
+    query_records = records.where(:addresses => {:state => self.states}) unless self.states.all_blank?
     query_records || records
   end
 

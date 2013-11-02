@@ -36,7 +36,7 @@ contact2 = Contact.create(:first_name => 'Jessica', :last_name => 'Farmer', :cli
   j.highlight = Faker::Lorem.paragraph(sentence_count = 2) unless counter == 1
 
   this_contact = Contact.first(:offset => rand(Contact.count))
-  Random.rand(1..3).times do
+  Random.rand(1..1).times do
     f = Facility.new(:name => Faker::Company.name)
     f.contact = this_contact
     f.setting = Setting.first(:offset => rand(Setting.count))

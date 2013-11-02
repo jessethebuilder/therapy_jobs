@@ -1,9 +1,12 @@
-<div class='container col-12'>
+<div class='container'>
   <div class='row'>
     <div class='col-md-6'>
 
       <div class='row'>
-        <h1><%= @job.category.name %></h1>
+        <h1>
+          <%= @job.category.name %>&nbsp;
+          <small><%= "#{@job.main_facility.address.city}, #{@job.main_facility.address.state.upcase}" %></small>
+        </h1>
       </div>
 
       <div class='row'>
@@ -20,6 +23,10 @@
           <!--<p class='pull-right'>-->
           <%= link_to 'Apply', apply_job_path(@job), :remote => true, :class => 'btn btn-primary' %>
           <%= link_to 'Inquire', '#', class: 'btn btn-default' %>
+
+          <%= link_to flag_job_path, :class => 'btn btn-danger pull-right' do %>
+            <span class='glyphicon glyphicon-flag'></span>
+          <% end %>
           <!--</p>-->
           <!--<p><%#= facilities_parser(@job) %></p>-->
         </div>
@@ -36,7 +43,8 @@
 
         <div class='col-sm-6'>
           <h3>Required Qualifications:</h3>
-          <ul><%= line_items(requirements_parser(@job)) %></ul>
+          <ul><%#= line_items(requirements_parser(@job)) %></ul>
+            <p>jfx</p>
         </div>
       </div>
 
@@ -48,18 +56,19 @@
 
         <div class='col-sm-6'>
           <h3>Desired Qualifications:</h3>
-          <ul><%= line_items(desirements_parser(@job)) %></ul>
+          <ul><%#= line_items(desirements_parser(@job)) %></ul>
+          <p>jfx</p>
         </div>
       </div>
 
     </div>
 
     <div class='col-md-5 panel col-md-offset-1'>
-      <div class='container'>
+      <!--<div class='container'>-->
         <div class='row'>
           <% if @job.main_facility.address.geocoded? %>
-              <% @address_to_map = @job.main_facility.address %>
-              <%= render 'addresses/small_map' %>
+            <%= render :partial => 'addresses/map',
+                       :locals => {:address => @job.main_facility.address, :title => @job.main_facility.name, :starting_address => @starting_address} %>
           <% end %>
         </div>
 
@@ -76,11 +85,7 @@
         <div class='row'>
           <%= render 'job_list' %>
         </div><!--row-->
-
-
-
-
-      </div>
+      <!--</div>-->
     </div>
   </div>
 

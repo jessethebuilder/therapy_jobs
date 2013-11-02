@@ -74,18 +74,4 @@ describe Hacks do
     end
 
   end #Array mp
-
-describe 'ActiveRecord::Base MP' do
-
-  #describe '#remove_blank_from_array_attributes(*attrs)' do
-  #  it 'should remove blank from array attributes passed to it' do
-  #    #JobSearchCriterion calls this method
-  #    jsc = create :job_search_criterion
-  #    jsc.categories = ['', '1']
-  #    jsc.save
-  #    jsc.categories.should == ['1']
-  #  end
-  #end
-
-  end #ActiveRecord::Base MP
 end

@@ -1,6 +1,10 @@
 <% if flash[:notice] %>
-  <div class="notice row row_success"><p><%= notice %></p></div>
+  <div class='container'>
+    <div class="notice row"><strong><%= notice %></strong></div>
+  </div>
 <% end %>
 <% if flash[:alert] %>
-  <div class="alert row row_error"><p><%= alert %></p></div>
+  <div class='container'>
+    <div class="alert row"><p><strong><%= alert %></strong></p></div>
+  </div>
 <% end %>

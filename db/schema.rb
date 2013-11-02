@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131009215010) do
+ActiveRecord::Schema.define(version: 20131101211357) do
 
   create_table "addresses", force: true do |t|
     t.integer  "addressable_id"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20131009215010) do
     t.boolean  "spammable"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "address_string"
   end
 
   create_table "categories", force: true do |t|
