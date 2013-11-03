@@ -16,7 +16,7 @@
   </div>
 
   <div class='row'>
-    <div id='map_from_address_tb' class='form-group col-sm-9' style='padding-left:0px'>
+    <div id='map_to_address_string' class='form-group col-sm-9' style='padding-left:0px'>
       <%= label_tag :address_string, 'Full Address', :class => 'sr-only' %>
       <%= text_field_tag :address_string, '', :class => 'form-control', :placeholder => 'Directions from -> City, ST or Zip or Address' %>
     </div>
@@ -68,9 +68,9 @@
         });
       <% else %>
         <% if @map_to_address.address_string.blank? %>
-          addError('#map_from_address_tb', '<strong>Please enter some sort of location ^^^<strong>');
+          addError('#map_to_address_string', '<strong>Please enter a location ^^^<strong>');
         <% else %>
-          addError('#map_from_address_tb', "Could not geolocate <strong><%= @map_to_address.address_string %></strong>");
+          addError('#map_to_address_string', "Could not locate <strong><%= @map_to_address.address_string %></strong>");
         <% end %>
       <% end %>
     <% end %>

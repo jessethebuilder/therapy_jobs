@@ -64,28 +64,29 @@
 
 
       <%= f.fields_for "location_searches[]", LocationSearch.new do |loc| %>
-      <%#= form_for @job_search_criterion.location_searches.new, :remote => true do |loc| %>
         <%= loc.fields_for :address do |addr| %>
 
           <div id='location_search' class='row'>
             <h3>Add a specific location to search<small></small></h3>
 
-            <div class='form-group col-md-2'>
+            <div id='search_radius_div' class='form-group col-md-2'>
               <%= loc.label :search_radius, 'Search radius', :class => 'sr-only' %>
-              <%= loc.text_field :search_radius, :class => 'form-control', :placeholder => 'Miles' %>
+              <%= loc.text_field :search_radius, :id => 'search_radius', :class => 'form-control', :placeholder => 'Miles' %>
             </div>
 
             <div class='form-group col-md-1'>
               <p class='form-control-static centered'><strong>from</strong></p>
             </div>
 
-            <div class='form-group col-md-3'>
+            <div id='address_string_div' class='form-group col-md-3'>
               <%= addr.label :address_string, 'Address', :class => 'sr-only' %>
-              <%= addr.text_field :address_string, :class => 'form-control', :placeholder => 'City, ST -or- Zip' %>
+              <%= addr.text_field :address_string, :id => 'address_string', :class => 'form-control',
+                                                   :placeholder => 'City, ST -or- Zip' %>
             </div>
 
             <div class='form-group col-md-2'>
-              <%= loc.submit 'Add Location', :class => 'form-control btn btn-warning' %>
+              <%= link_to 'Add Location', radius_search_location_searches_path, :remote => true,
+                                                    :id => 'add_location', :class => 'btn btn-warning' %>
             </div>
           </div>
         </div>
@@ -103,6 +104,7 @@
 
   <script>
       submitOnEnter('<%= "##{jsc_form_link}" %>');
+      linkBuilder('#add_location', ['#address_string', '#search_radius']);
 
       $('#job_search_toggle').click(function(e){
           e.preventDefault();

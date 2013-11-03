@@ -1,6 +1,15 @@
 class LocationSearchesController < ApplicationController
   before_action :set_location_search, only: [:show, :edit, :update, :destroy]
 
+  def radius_search
+    @location_search = LocationSearch.new()
+    if params[:address_string] && params[:search_radius]
+      @location_search.address.address_string = params[:address_string]
+      @location_search.search_radius = params[:search_radius]
+      @location_search.save
+    end
+  end
+
   def create
     @location_search = LocationSearch.new(params[:location_search])
 

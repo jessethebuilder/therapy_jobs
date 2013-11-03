@@ -10,25 +10,24 @@ TherapyJobs::Application.routes.draw do
   get 'sign_up', :to => 'users#sign_up', :as => 'sign_up'
 
 
-  resources :location_searches
+  resources :location_searches do
+    collection do
+      get 'radius_search/(:address_string)/(:search_radius)',
+                        :to => 'location_searches#radius_search', :as => 'radius_search'
+    end
+  end
+
   resources :categories
   resources :job_search_criteria do
-
-
     collection do
       get 'search', :to => 'job_search_criteria#search', :as => 'search'
     end
   end
 
-
   resources :facilities
   resources :clients
   resources :contacts
   resources :job_form_sources
-
-
-
-  #mount FarmAddress::Engine => "/"
 
   resources :jobs do
     member do

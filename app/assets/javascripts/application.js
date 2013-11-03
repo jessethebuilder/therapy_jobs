@@ -69,12 +69,13 @@ function addTextFieldsToAjaxLink(link, text_field_selectors){
                   }
             }
         $.ajax($(link).attr('href') + url);
-    })
+    })   //does this twice
 }
 function clickOnEnterIfFocused(link, focused_field){
     $(document).keypress(function(e){
         if(e.which == 13){
             if($(focused_field).is(":focus")){
+                e.preventDefault();
                 $(link).click();
             }
         }
