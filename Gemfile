@@ -80,3 +80,5 @@ gem 'farm_twitter_bootstrap', :path => 'C:\Users\jf\Desktop\jesseweb\farm_twitte
 gem 'whenever', :require => false
 
 gem 'geocoder'
+
+gem 'csv-mapper'

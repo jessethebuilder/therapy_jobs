@@ -100,7 +100,7 @@ module Hacks
   def articleator(word, capitalize = false)
     capitalize ? article = 'A' : article = 'a'
     test_word = word.downcase
-    %w|honest honor|.each do |an_word|
+    %w|honest honor slp|.each do |an_word|
       article += 'n' if test_word[(0...an_word.length)] == an_word
     end
     article += 'n' if %w|a e i o u|.include?(test_word[0])

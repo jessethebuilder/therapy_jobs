@@ -1,6 +1,9 @@
 FactoryGirl.define do
-  sequence(:email) {|n| "test#{n}@test.com"}
+  sequence(:email) { |n| "test#{n}@test.com" }
+  sequence(:first_name){ |n| "first_name#{n}" }
+  sequence(:last_name){ |n| "last_name#{n}" }
   sequence(:name) { |n| "name#{n}" }
+  sequence(:nickname){ |n| "nickname#{n}" }
   sequence(:code) { |n| "code#{n}" }
 
   factory :job_form_source do
@@ -13,9 +16,9 @@ FactoryGirl.define do
   end
 
   factory :job do
-    duration 13
     category
     contact
+    duration_type DURATION_TYPES.keys.sample
 
     after(:build, :create) do |job, evaluator|
       job.facilities << create(:facility)
@@ -28,7 +31,7 @@ FactoryGirl.define do
     end
 
     factory :management_job do
-      after(:build, :create) do |job, e|
+      after(:build, :create) do |job, evaluator|
         job.category = create(:management_category)
       end
     end
@@ -41,8 +44,9 @@ FactoryGirl.define do
     factory :standard_category do
       code STANDARD_CATEGORIES.sample
 
+
       after(:build, :create) do |category, evaluator|
-        category.name = CATEGORIES[category.code]
+        category.name = CATEGORIES[category.code][:name]
       end
     end
 
@@ -57,8 +61,19 @@ FactoryGirl.define do
     setting
 
     after(:build, :create) do |facility, evaluator|
-      facility.address.city = 'Port Angeles'
-      facility.address.state = 'wa'
+      #facility.address.street = Faker::Address.street_address
+      facility.address.city = Faker::Address.city
+      facility.address.state = facility.address.class::STATES.keys.sample
+    end
+  end
+
+  factory :address do
+
+    factory :address_with_data do
+      street Faker::Address.street_address
+      city Faker::Address.city
+      state Address::STATES.keys.sample
+      zip Faker::Address.zip
     end
   end
 
@@ -84,9 +99,16 @@ FactoryGirl.define do
   end #job
 
   factory :contact do
-    first_name Faker::Name.first_name
-    last_name Faker::Name.last_name
-    client
+    #first_name Faker::Name.first_name
+    #last_name Faker::Name.last_name
+    #client
+
+    factory :contact_with_data do
+      first_name
+      last_name
+      nickname
+      email
+    end
 
     factory :contact_with_facilities do
       ignore do

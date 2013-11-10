@@ -41,4 +41,16 @@ describe Facility do
     end
   end #Associations
 
+  describe '===' do
+    let(:f2){ facility.dup }
+    before(:each){ f2.address = facility.address }
+
+    it 'should compare facilities' do
+      f2.should_not be_nil
+      facility.===(f2).should be_true
+      facility.contact = create :contact
+      facility.===(f2).should be_false
+    end
+  end
+
 end #spec

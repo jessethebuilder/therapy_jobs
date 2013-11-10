@@ -1,4 +1,10 @@
 TherapyJobs::Application.routes.draw do
+  resources :quick_jobs do
+    collection do
+
+    end
+  end
+
   resources :addresses do
     member do
       get 'map_to/(:address_string)', :to => 'addresses#map_to', :as => 'map_to'
@@ -33,6 +39,10 @@ TherapyJobs::Application.routes.draw do
     member do
       get 'apply', :to => 'jobs#apply', :as => 'apply'
       get 'flag', :to => 'jobs#flag', :as => 'flag'
+    end
+
+    collection do
+      get 'tj', :to => 'jobs#tj', :as => 'tj'
     end
   end
 

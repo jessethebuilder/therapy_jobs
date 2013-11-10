@@ -7,7 +7,7 @@ describe CategoriesHelper do
     #Job has_one category
     let(:job){ create :job }
 
-    it 'should associate a single category, on a has_one association, to the record' do
+    it 'should associate a single category on a has_one association, to the record' do
       category.code = 'tc'
       category.name = 'Test Category'
       job.set_category('tc')

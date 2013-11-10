@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131101211357) do
+ActiveRecord::Schema.define(version: 20131107224917) do
 
   create_table "addresses", force: true do |t|
     t.integer  "addressable_id"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20131101211357) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "address_string"
+    t.string   "geocoded_address"
+    t.string   "country"
   end
 
   create_table "categories", force: true do |t|
@@ -78,6 +80,7 @@ ActiveRecord::Schema.define(version: 20131101211357) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "fax"
+    t.string   "nickname"
   end
 
   create_table "facilities", force: true do |t|
@@ -142,17 +145,35 @@ ActiveRecord::Schema.define(version: 20131101211357) do
     t.integer  "contact_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "zip_verified",        default: false
+    t.boolean  "zip_verified",          default: false
     t.text     "highlight"
     t.integer  "client_id"
     t.integer  "main_facility_id"
     t.string   "duration_type"
+    t.string   "acceptable_categories"
   end
 
   create_table "location_searches", force: true do |t|
     t.float    "search_radius"
     t.boolean  "active",                  default: true
     t.integer  "job_search_criterion_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "quick_jobs", force: true do |t|
+    t.string   "cats"
+    t.string   "acceptable_cats"
+    t.string   "setting_code"
+    t.string   "duration_type"
+    t.string   "street"
+    t.string   "street2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.text     "description"
+    t.text     "private_description"
+    t.string   "contact_string"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

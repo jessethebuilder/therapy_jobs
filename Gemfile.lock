@@ -71,6 +71,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    csv-mapper (0.5.1)
+      fastercsv
     database_cleaner (1.0.1)
     devise (3.0.0.rc)
       bcrypt-ruby (~> 3.0)
@@ -87,6 +89,7 @@ GEM
       railties (>= 3.0.0)
     faker (1.2.0)
       i18n (~> 0.5)
+    fastercsv (1.5.5)
     ffi (1.9.0-x86-mingw32)
     formatador (0.2.4)
     geocoder (1.1.8)
@@ -240,6 +243,7 @@ DEPENDENCIES
   capybara
   carrierwave
   coffee-rails (~> 4.0.0)
+  csv-mapper
   database_cleaner (~> 1.0.0rc)
   devise (= 3.0.0rc)
   factory_girl_rails

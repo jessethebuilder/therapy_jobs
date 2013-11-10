@@ -6,8 +6,7 @@ describe Job do
   let(:job2){ build :job }
 
   describe 'Validations' do
-    it{ should validate_presence_of :duration }
-    it{ should validate_numericality_of :duration }
+    it{ should validate_presence_of :duration_type }
     it{ should have_many :facilities }
     it{ should have_one :category }
 

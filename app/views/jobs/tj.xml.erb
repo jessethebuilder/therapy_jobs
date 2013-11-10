@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<source>
+  <lastBuildDate><%= Time.now %></lastBuildDate>
+  <% @jobs.each do |j| %>
+    <%= j.to_tj_xml %>
+  <% end %>
+</source>

@@ -1,5 +1,7 @@
 class Category < ActiveRecord::Base
-  belongs_to :categorization, :polymorphic => true
+  has_many :categorizations
+  has_many :jobs, :through => :categorizations
+
   has_many :job_form_sources
 
   validates :code, :presence => true, :uniqueness => true

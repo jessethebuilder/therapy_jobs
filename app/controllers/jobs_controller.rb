@@ -2,8 +2,10 @@ class JobsController < ApplicationController
   include ApplicationHelper
   before_action :set_job, only: [:show, :edit, :update, :destroy, :apply]
 
-  # GET /jobs
-  # GET /jobs.json
+  def tj
+    @jobs = Job.all
+  end
+
   def index
     if known_user?
       @jobs = current_jsc.all_search

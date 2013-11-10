@@ -13,6 +13,12 @@ module ApplicationHelper
   include FarmTwitterBootstrap
   include WebBasics
 
+  def management_position_codes
+    arr = CATEGORIES.keys
+    STANDARD_CATEGORIES.each{ |code| arr.delete(code) }
+    arr
+  end
+
   def resource_name
     :user
   end
@@ -76,4 +82,3 @@ module ApplicationHelper
   end
 
 end
-

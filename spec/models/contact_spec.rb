@@ -1,30 +1,38 @@
 require 'spec_helper'
 
+
 describe Contact do
+  let(:c){ build :contact }
 
-  describe 'Validations' do
-    let(:c){ Contact.new }
+  #it{ validates_uniqueness_of :email }
+  #it{ validates_uniqueness_of :nickname }
 
-    it 'validates first and last name' do
-      c.should_not be_valid
-      c.valid?
-      c.errors[:first_name].should_not be_nil
-      c.errors[:last_name].should_not be_nil
-      c.first_name = Faker::Name.first_name
-      c.last_name = Faker::Name.last_name
-      c.valid?
-      c.errors[:first_name].count.should == 0
-      c.errors[:last_name].count.should == 0
+  describe '#Contact.find_or_create_from_contact_string' do
+    before(:all) do
+      100.times { create :contact_with_data }
+    end
+    let!(:c2){ create :contact, :nickname => 'ss', :email => 'shawnspencer@test.com', :first_name => 'Shawn', :last_name => 'Spencer'}
+
+    it 'should find Contact if :nickname matches (case inspecific)' do
+      Contact.find_or_create_by_contact_string('Ss').should == c2
     end
 
-    it 'validates client_id' do
-      c.valid?
-      c.errors[:client].should_not be_nil
-      client = create :client
-      c.client = client
-      c.errors[:client].count.should == 0
+    it 'should find Contact if emails match (case inspecific)' do
+      Contact.find_or_create_by_contact_string('sHawnSpencer@test.coM').should == c2
     end
 
+    it 'should find Contact if first and last names match (case inspecific)' do
+      Contact.find_or_create_by_contact_string('shawn SPENCER').should == c2
+      Contact.find_or_create_by_contact_string('Shawn Spencerson').should_not == c2
+    end
+
+    it 'should create a new contact if nothing matches' do
+      nonsense = '1239kfdncii-0))+=1-..,;/.liuhhb'
+      contact = Contact.find_or_create_by_contact_string(nonsense)
+      contact.class.should == Contact
+      contact.nickname.should == nonsense
+      contact.should == Contact.last
+    end
   end
 
 end
