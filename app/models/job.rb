@@ -72,7 +72,7 @@ end
 class Job < ActiveRecord::Base
   include TherapyJobsDotCom
   include CategoriesHelper
-  extend ActiveRecordHelper
+  extend FarmerTown::ActiveRecordHelper
 
   attr_accessor :main_facility
 

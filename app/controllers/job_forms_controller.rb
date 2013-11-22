@@ -1,10 +1,9 @@
+#require 'helpers/pdfs/job_form_pdf'
+
 class JobFormsController < ApplicationController
   before_filter :authenticate_user!
   before_action :set_job_form, only: [:show, :edit, :update, :destroy, :process_form, :reset]
 
-
-  # GET /job_forms
-  # GET /job_forms.json
   def index
     @job_forms = JobForm.all
   end
@@ -12,6 +11,13 @@ class JobFormsController < ApplicationController
   # GET /job_forms/1
   # GET /job_forms/1.json
   def show
+    respond_to do |format|
+      format.pdf do
+        pdf = JobFormPdf.new(@job_form, view_context)
+        send_data pdf.render, :filename => @job_form.form_name, :type => 'application/pdf', :disposition => 'inline'
+      end
+    end
+
 
   end
 
@@ -38,8 +44,6 @@ class JobFormsController < ApplicationController
   end
 
   def reset
-    name = @job_form.source.name
-    code = @job_form.source.category.code
     @job_form.delete
     render fill_out_job_forms_path(:name => name, :code => code)
   end

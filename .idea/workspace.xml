@@ -2,44 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a198337a-b659-40cf-a501-92488aa84c02" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/active_record_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/helpers/active_record_helper_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/geocode_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/sandbox.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/sandbox.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/jobs/tj.xml.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/pdfs/job_form_pdf.rb" />
+      <change type="DELETED" beforePath="C:\Users\jf\Desktop\jesseweb\therapy_jobs\app\helpers\active_record_helper.rb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/helpers/categories_helper_spec.rb" afterPath="$PROJECT_DIR$/spec/helpers/categories_helper_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/category.rb" afterPath="$PROJECT_DIR$/app/models/category.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/contact.rb" afterPath="$PROJECT_DIR$/app/models/contact.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/contact_spec.rb" afterPath="$PROJECT_DIR$/spec/models/contact_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/contacts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/contacts_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/facility.rb" afterPath="$PROJECT_DIR$/app/models/facility.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/facility_spec.rb" afterPath="$PROJECT_DIR$/spec/models/facility_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/factories.rb" afterPath="$PROJECT_DIR$/spec/factories.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/job_forms/form.html.erb" afterPath="$PROJECT_DIR$/app/views/job_forms/form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/hacks.rb" afterPath="$PROJECT_DIR$/app/helpers/hacks.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/job.rb" afterPath="$PROJECT_DIR$/app/models/job.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/features/job_search_requests_spec.rb" afterPath="$PROJECT_DIR$/spec/features/job_search_requests_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/features/job_show_requests_spec.rb" afterPath="$PROJECT_DIR$/spec/features/job_show_requests_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/job_spec.rb" afterPath="$PROJECT_DIR$/spec/models/job_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/jobs_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/jobs_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/jobs_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/jobs_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/monkey_patch_spec.rb" afterPath="$PROJECT_DIR$/spec/monkey_patch_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/job_form.rb" afterPath="$PROJECT_DIR$/app/models/job_form.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/job_forms_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/job_forms_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/mime_types.rb" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/monkey_patches.rb" afterPath="$PROJECT_DIR$/config/initializers/monkey_patches.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/therapy_jobs.iml" afterPath="$PROJECT_DIR$/.idea/therapy_jobs.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="therapy_jobs.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/../order_online/Gemfile" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1375813847799" ignored="false" />
-    <file path="/Gemfile" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383702646046" ignored="false" />
+    <file path="/Gemfile" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1385013842008" ignored="false" />
     <file path="/_the_flash.html.erb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383177860566" ignored="false" />
     <file path="/application.html.erb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383177640890" ignored="false" />
     <file path="$PROJECT_DIR$/../farm_equipment/lib/abbrv.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1374781361908" ignored="false" />
@@ -55,10 +39,10 @@
     <file path="/farm_twitter_bootstrap.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1374783466893" ignored="false" />
     <file path="$PROJECT_DIR$/../order_online/app/views/menus/show.html.erb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1374810541923" ignored="false" />
     <file path="$PROJECT_DIR$/../farm_address/spec/dummy/config/routes.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1375392942505" ignored="false" />
-    <file path="/routes.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383776189489" ignored="false" />
-    <file path="/Dummy.txt" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384055210090" ignored="false" />
-    <file path="/job.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383872701572" ignored="false" />
-    <file path="/Ruby Console" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383941215123" ignored="false" />
+    <file path="/routes.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1385023385718" ignored="false" />
+    <file path="/Dummy.txt" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1385100474689" ignored="false" />
+    <file path="/job.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384396748958" ignored="false" />
+    <file path="/Ruby Console" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1385014469233" ignored="false" />
     <file path="/20130802161822_add_label_to_address.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1375460327895" ignored="false" />
     <file path="$PROJECT_DIR$/../farm_address/db/migrate/20130802161822_add_label_to_address.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1375460407396" ignored="false" />
     <file path="$PROJECT_DIR$/../farm_address/db/migrate/20130802162029_add_label_to_farm_address_addresses.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1375460440600" ignored="false" />
@@ -81,10 +65,10 @@
     <file path="/constants.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1381355496347" ignored="false" />
     <file path="$PROJECT_DIR$/../farm_address/lib/farm_address.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1381185896917" ignored="false" />
     <file path="/farm_address.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1381185621767" ignored="false" />
-    <file path="/application_helper.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383784145262" ignored="false" />
+    <file path="/application_helper.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1385010389879" ignored="false" />
     <file path="$PROJECT_DIR$/../farm_address/lib/farm_address/engine.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1375572255791" ignored="false" />
     <file path="/engine.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1375572159542" ignored="false" />
-    <file path="/facility.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383884014770" ignored="false" />
+    <file path="/facility.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1385010209338" ignored="false" />
     <file path="/facility_spec.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383887123969" ignored="false" />
     <file path="/20130803233919_create_facilities.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1375639653749" ignored="false" />
     <file path="/20130804192445_create_facilitization.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1375651273651" ignored="false" />
@@ -102,7 +86,7 @@
     <file path="/modal.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1379465431052" ignored="false" />
     <file path="/show.html.erb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383362702672" ignored="false" />
     <file path="/_job.html.erb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1378174585045" ignored="false" />
-    <file path="/hacks.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383686270595" ignored="false" />
+    <file path="/hacks.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1385009435034" ignored="false" />
     <file path="/hacks_spec.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1377113616478" ignored="false" />
     <file path="/jobs_helper.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383777209548" ignored="false" />
     <file path="/20130806235510_add_zip_verified_to_facility.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1375833631237" ignored="false" />
@@ -116,7 +100,7 @@
     <file path="$PROJECT_DIR$/../order_online/app/models/item.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1375922316613" ignored="false" />
     <file path="/_job_table.html.erb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1378608063541" ignored="false" />
     <file path="/hash_explained_attributes_helper.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1375985331749" ignored="false" />
-    <file path="/jobs_controller.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1381620203692" ignored="false" />
+    <file path="/jobs_controller.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384396674352" ignored="false" />
     <file path="/20130808190909_add_fax_to_contact.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1375988972281" ignored="false" />
     <file path="/_display_on_list.html.erb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1375994757499" ignored="false" />
     <file path="/20130808214235_add_company_id_to_job.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1375998793546" ignored="false" />
@@ -157,9 +141,9 @@
     <file path="/_top_nav.html.erb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383255457190" ignored="false" />
     <file path="/20130822171940_create_job_forms.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1377291201736" ignored="false" />
     <file path="/20130822172411_create_job_form_sources.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1377297987512" ignored="false" />
-    <file path="/job_forms_controller.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1379205604162" ignored="false" />
+    <file path="/job_forms_controller.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1385023668345" ignored="false" />
     <file path="/job_form_source.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1378715617350" ignored="false" />
-    <file path="/job_form.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1378712934399" ignored="false" />
+    <file path="/job_form.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1385014713309" ignored="false" />
     <file path="/job_form_seed.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1377579639897" ignored="false" />
     <file path="/pt_skills.txt" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1377293300335" ignored="false" />
     <file path="/job_form_source_spec.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1377376899450" ignored="false" />
@@ -169,7 +153,7 @@
     <file path="/20130827063935_add_code_and_name_to_job_form.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1377585971353" ignored="false" />
     <file path="$PROJECT_DIR$/../rtj2/app/helpers/magic_form_helper.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1377641183117" ignored="false" />
     <file path="/magic_form_helper.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1377641183117" ignored="false" />
-    <file path="/form.html.erb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1382726912105" ignored="false" />
+    <file path="/form.html.erb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1385023367362" ignored="false" />
     <file path="/job_forms_helper.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1378764438444" ignored="false" />
     <file path="/users_controller.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1379465887913" ignored="false" />
     <file path="/apply.js.erb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1378177606656" ignored="false" />
@@ -206,7 +190,7 @@
     <file path="/location_searches_controller.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383440916439" ignored="false" />
     <file path="/20131004235817_add_job_search_criterion_id_to_categorization.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1380931333015" ignored="false" />
     <file path="/monkey_patch_spec.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383898898885" ignored="false" />
-    <file path="/monkey_patches.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383898692885" ignored="false" />
+    <file path="/monkey_patches.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384396169136" ignored="false" />
     <file path="/20131006010345_add_duration_types_to_job_and_job_search_criterion.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1381021474982" ignored="false" />
     <file path="$PROJECT_DIR$/../farm_address/lib/farm_address/geocoder.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1381355123852" ignored="false" />
     <file path="/geocoder.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1381175832854" ignored="false" />
@@ -224,7 +208,7 @@
     <file path="/sandbox.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383675817376" ignored="false" />
     <file path="/quick_jobs_controller.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383685011312" ignored="false" />
     <file path="/quick_jobs_helper.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383684192920" ignored="false" />
-    <file path="/quick_job.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383887711641" ignored="false" />
+    <file path="/quick_job.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384073107929" ignored="false" />
     <file path="/20131105174230_add_geocoded_address_to_address.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383674459594" ignored="false" />
     <file path="/tj.html.erb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383681647714" ignored="false" />
     <file path="/tj.xml.erb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383776331374" ignored="false" />
@@ -232,14 +216,44 @@
     <file path="/20131106030434_add_lat_and_lon_to_quick_job.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383707389103" ignored="false" />
     <file path="/20131106045834_remove_polymorphic_from_category.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383713981126" ignored="false" />
     <file path="/20131106053143_add_acceptable_categories_job.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383715936437" ignored="false" />
-    <file path="/active_record_helper.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383896358002" ignored="false" />
+    <file path="/active_record_helper.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384396559664" ignored="false" />
     <file path="/active_record_helper_spec.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383859586573" ignored="false" />
     <file path="/20131107224917_add_nickname_to_contact.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383864610864" ignored="false" />
     <file path="/contacts_controller.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383866209565" ignored="false" />
-    <file path="$PROJECT_DIR$/../candidate_dirty/app/models/candidate.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383941090846" ignored="false" />
-    <file path="/candidate.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383941120434" ignored="false" />
-    <file path="$PROJECT_DIR$/../candidate_dirty/db/migrate/20131108183425_create_candidates.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383941300318" ignored="false" />
-    <file path="/20131108183425_create_candidates.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1383941300009" ignored="false" />
+    <file path="$PROJECT_DIR$/../candidate_dirty/app/models/candidate.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384065640449" ignored="false" />
+    <file path="/candidate.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384065607185" ignored="false" />
+    <file path="$PROJECT_DIR$/../candidate_dirty/db/migrate/20131108183425_create_candidates.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384062118986" ignored="false" />
+    <file path="/20131108183425_create_candidates.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384062118393" ignored="false" />
+    <file path="$PROJECT_DIR$/../candidate_dirty/Gemfile" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384060957768" ignored="false" />
+    <file path="$PROJECT_DIR$/../candidate_dirty/db/schema.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384062202604" ignored="false" />
+    <file path="$PROJECT_DIR$/../candidate_dirty/app/helpers/application_helper.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384232299041" ignored="false" />
+    <file path="$PROJECT_DIR$/../farmer_town/lib/therapy_stuff.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384232101707" ignored="false" />
+    <file path="$PROJECT_DIR$/../farmer_town/lib/rails_utilities.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384231647113" ignored="false" />
+    <file path="/rails_utilities.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384232086957" ignored="false" />
+    <file path="$PROJECT_DIR$/../farmer_town/lib/active_record_helper.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384231734936" ignored="false" />
+    <file path="$PROJECT_DIR$/../farmer_town/lib/active_record_monkey_patches.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384231862841" ignored="false" />
+    <file path="/active_record_monkey_patches.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384231815526" ignored="false" />
+    <file path="$PROJECT_DIR$/../farmer_town/Gemfile" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384231841631" ignored="false" />
+    <file path="$PROJECT_DIR$/../farmer_town/lib/farmer_town.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1385009719793" ignored="false" />
+    <file path="/farmer_town.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1385009717760" ignored="false" />
+    <file path="/application_controller.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384231967458" ignored="false" />
+    <file path="$PROJECT_DIR$/../farmer_town/lib/rails_farm_equipment.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384232113734" ignored="false" />
+    <file path="$PROJECT_DIR$/../candidate_dirty/app/views/mass_mailer/job_in_this_city.html.erb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384233130020" ignored="false" />
+    <file path="/job_in_this_city.html.erb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384233070632" ignored="false" />
+    <file path="$PROJECT_DIR$/../farmer_town/lib/farmer_town/farm_equipment.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384232267679" ignored="false" />
+    <file path="$PROJECT_DIR$/../farmer_town/lib/farmer_town/string_hacks.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384232554589" ignored="false" />
+    <file path="$PROJECT_DIR$/../farmer_town/lib/farmer_town/monkey_patches.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384233215888" ignored="false" />
+    <file path="$PROJECT_DIR$/../candidate_dirty/app/mailers/mass_mailer.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384232866170" ignored="false" />
+    <file path="/mass_mailer.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384232862218" ignored="false" />
+    <file path="$PROJECT_DIR$/../candidate_dirty/log/mass_mails/2013-11-13---ot---snf---bethesda---md.log" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384398279520" ignored="false" />
+    <file path="$PROJECT_DIR$/../candidate_dirty/log/mass_mails/2013-11-13---pt---snf---Corpus Christi---tx.log" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384405912956" ignored="false" />
+    <file path="$PROJECT_DIR$/../candidate_dirty/app/helpers/zip_distance_helper.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384406175844" ignored="false" />
+    <file path="$PROJECT_DIR$/../candidate_dirty/log/mass_mails/2013-11-13---slp---snf---San Antonio---tx.log" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384406214923" ignored="false" />
+    <file path="$PROJECT_DIR$/../candidate_dirty/log/mass_mails/2013-11-14---slp---snf---san antonio---tx.log" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1384458404278" ignored="false" />
+    <file path="/html_basics.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1385009620336" ignored="false" />
+    <file path="$PROJECT_DIR$/../farmer_town/lib/farmer_town/html_basics.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1385009622226" ignored="false" />
+    <file path="/job_form_pdf.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1385024774366" ignored="false" />
+    <file path="/mime_types.rb" changelist="a198337a-b659-40cf-a501-92488aa84c02" time="1385016579121" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,37 +273,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="address.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/address.rb">
+      <file leaf-file-name="job_form.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/job_form.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="54" selection-start="1556" selection-end="2623" vertical-scroll-proportion="0.88762444">
+            <state line="40" column="0" selection-start="852" selection-end="852" vertical-scroll-proportion="0.023809524">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="active_record_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/active_record_helper.rb">
+      <file leaf-file-name="job_forms_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/job_forms_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
+            <state line="15" column="0" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="monkey_patch_spec.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/monkey_patch_spec.rb">
+      <file leaf-file-name="job_form_pdf.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/pdfs/job_form_pdf.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="50" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="monkey_patches.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/initializers/monkey_patches.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="26" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
+            <state line="5" column="15" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -323,22 +328,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/jobs_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/job.rb" />
-        <option value="$PROJECT_DIR$/spec/features/job_search_requests_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/features/job_show_requests_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/helpers/active_record_helper_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/models/job_spec.rb" />
-        <option value="$PROJECT_DIR$/app/models/contact.rb" />
-        <option value="$PROJECT_DIR$/spec/models/contact_spec.rb" />
-        <option value="$PROJECT_DIR$/app/models/facility.rb" />
-        <option value="$PROJECT_DIR$/spec/factories.rb" />
-        <option value="$PROJECT_DIR$/spec/models/facility_spec.rb" />
-        <option value="$PROJECT_DIR$/app/models/quick_job.rb" />
-        <option value="$PROJECT_DIR$/spec/models/address_spec.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/hacks.rb" />
         <option value="$PROJECT_DIR$/app/helpers/active_record_helper.rb" />
+        <option value="$PROJECT_DIR$/app/models/facility.rb" />
         <option value="$PROJECT_DIR$/app/models/address.rb" />
-        <option value="$PROJECT_DIR$/spec/monkey_patch_spec.rb" />
-        <option value="$PROJECT_DIR$/config/initializers/monkey_patches.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/helpers/pdfs/job_form_pdf.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/mime_types.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/job_forms/form.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/job_forms_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/job_form.rb" />
+        <option value="$PROJECT_DIR$/app/pdfs/job_form_pdf.rb" />
       </list>
     </option>
   </component>
@@ -381,6 +386,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -409,106 +416,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="requests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="features" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -523,43 +430,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="initializers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -578,31 +449,11 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -625,14 +476,14 @@
       <recent name="C:\Users\jf\Desktop\jesseweb\therapy_jobs\app\assets\stylesheets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jf\Desktop\jesseweb\therapy_jobs\app" />
       <recent name="C:\Users\jf\Desktop\jesseweb\therapy_jobs\app\views\jobs" />
       <recent name="C:\Users\jf\Desktop\jesseweb\therapy_jobs\app\views\users" />
       <recent name="C:\Users\jf\Desktop\jesseweb\therapy_jobs\app\views\devise\sessions" />
       <recent name="C:\Users\jf\Desktop\jesseweb\therapy_jobs\app\views\devise_modal" />
-      <recent name="C:\Users\jf\Desktop\jesseweb\therapy_jobs\app\views\devise" />
     </key>
   </component>
-  <component name="RunManager" selected="Rake.spec">
+  <component name="RunManager" selected="Rails.Development: therapy_jobs">
     <configuration default="false" name="db:reset" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="therapy_jobs" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -744,9 +595,7 @@
       <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/bin/rails" />
       <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="console" />
       <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="true" />
-      <RunnerSettings RunnerId="RubyDebugRunner" />
       <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
@@ -1037,9 +886,9 @@
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="IRB console.Rails console: therapy_jobs" />
         <item index="1" class="java.lang.String" itemvalue="IRB console.Rails console: therapy_jobs" />
-        <item index="2" class="java.lang.String" itemvalue="Rake.db:migrate" />
-        <item index="3" class="java.lang.String" itemvalue="Rake.db:rollback" />
-        <item index="4" class="java.lang.String" itemvalue="IRB console.Rails console: therapy_jobs" />
+        <item index="2" class="java.lang.String" itemvalue="IRB console.Rails console: therapy_jobs" />
+        <item index="3" class="java.lang.String" itemvalue="IRB console.Rails console: therapy_jobs" />
+        <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
       </list>
     </recent_temporary>
   </component>
@@ -1103,7 +952,11 @@
       <created>1383504632851</created>
       <updated>1383504632851</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Psyche">
+      <created>1384055232225</created>
+      <updated>1384055232225</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1134,11 +987,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25804377" sideWeight="0.47702703" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41486487" sideWeight="0.8886744" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21364221" sideWeight="0.58760107" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41239893" sideWeight="0.8886744" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4256757" sideWeight="0.111325614" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.522973" sideWeight="0.8886744" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47702703" sideWeight="0.8886744" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1192,7 +1045,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Juliet's Revenge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Psyche" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1210,20 +1063,11 @@
     <MESSAGE value="Go Hawks" />
     <MESSAGE value="Ear" />
     <MESSAGE value="Juliet's Revenge" />
+    <MESSAGE value="Psyche" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/helpers/hacks.rb</url>
-          <line>74</line>
-          <option name="timeStamp" value="103" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/job_forms_controller.rb</url>
-          <line>40</line>
-          <option name="timeStamp" value="171" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/controllers/location_searches_controller.rb</url>
           <line>8</line>
@@ -1242,92 +1086,92 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/helpers/hacks_spec.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/contact_spec.rb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/hacks.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="46" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0" />
+        <state line="75" column="5" selection-start="2142" selection-end="2142" vertical-scroll-proportion="3.0833333" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/category_spec.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/jobs_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="6" selection-start="2276" selection-end="2276" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/helpers/categories_helper_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/facility_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="39" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/quick_job.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="28" selection-start="1061" selection-end="1061" vertical-scroll-proportion="0.0" />
+        <state line="7" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/job.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="98" column="0" selection-start="2634" selection-end="2634" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/factories.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/jobs/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="53" selection-start="1495" selection-end="1495" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/contact.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="36" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0" />
+        <state line="7" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="-4.576923" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/facility.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="44" selection-start="165" selection-end="178" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/address_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="4" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/active_record_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/monkey_patch_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="50" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/monkey_patches.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="26" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="9" column="5" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/address.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="54" selection-start="1556" selection-end="2623" vertical-scroll-proportion="0.88762444">
+        <state line="1" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="3" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="10" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/mime_types.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="43" selection-start="249" selection-end="249" vertical-scroll-proportion="0.25" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/job_forms_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="14" selection-start="1178" selection-end="1254" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/job_forms/form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="46" selection-start="944" selection-end="944" vertical-scroll-proportion="-7.8461537" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pdfs/job_form_pdf.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="15" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/job_forms_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/job_form.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="852" selection-end="852" vertical-scroll-proportion="0.023809524">
           <folding />
         </state>
       </provider>

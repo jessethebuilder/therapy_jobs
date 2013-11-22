@@ -7,10 +7,9 @@ GIT
       sass (>= 3.2)
 
 PATH
-  remote: C:/Users/jf/Desktop/jesseweb/farm_twitter_bootstrap
+  remote: C:/Users/jf/Desktop/jesseweb/farmer_town
   specs:
-    farm_twitter_bootstrap (0.0.4)
-      rails (~> 4.0.0)
+    farmer_town (0.0.1)
 
 GEM
   remote: http://rubygems.org/
@@ -71,8 +70,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    csv-mapper (0.5.1)
-      fastercsv
     database_cleaner (1.0.1)
     devise (3.0.0.rc)
       bcrypt-ruby (~> 3.0)
@@ -89,7 +86,6 @@ GEM
       railties (>= 3.0.0)
     faker (1.2.0)
       i18n (~> 0.5)
-    fastercsv (1.5.5)
     ffi (1.9.0-x86-mingw32)
     formatador (0.2.4)
     geocoder (1.1.8)
@@ -135,6 +131,13 @@ GEM
       cocaine (~> 0.5.0)
       mime-types
     polyglot (0.3.3)
+    prawn (0.8.4)
+      prawn-core (>= 0.8.4, < 0.9)
+      prawn-layout (>= 0.8.4, < 0.9)
+      prawn-security (>= 0.8.4, < 0.9)
+    prawn-core (0.8.4)
+    prawn-layout (0.8.4)
+    prawn-security (0.8.4)
     pry (0.9.12.2-x86-mingw32)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -243,18 +246,18 @@ DEPENDENCIES
   capybara
   carrierwave
   coffee-rails (~> 4.0.0)
-  csv-mapper
   database_cleaner (~> 1.0.0rc)
   devise (= 3.0.0rc)
   factory_girl_rails
   faker
-  farm_twitter_bootstrap!
+  farmer_town!
   geocoder
   guard-rspec
   jbuilder (~> 1.2)
   jquery-rails
   launchy (~> 2.3.0)
   paperclip
+  prawn
   rails (= 4.0.0)
   rspec-rails
   sass-rails (~> 4.0.0)

@@ -7,12 +7,11 @@ class Array
 end
 
 class ActiveRecord::Base
-  def match_on(*attrs, case_sensitive = false)
+  def match_on(*attrs)
     where_clauses = "self.class"
       attrs.each do |attr|
         where_clauses += ".where('#{attr.to_s} LIKE ?', '#{send(attr)}')"
       end
       eval(where_clauses)
-    #end
   end
 end

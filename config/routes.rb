@@ -46,10 +46,9 @@ TherapyJobs::Application.routes.draw do
     end
   end
 
-  resources :job_forms, :only => [:create, :update] do
+  resources :job_forms, :only => [:create, :update, :show] do
     collection do
-      get ':name/(:code)', :to => 'job_forms#fill_out', :as => 'fill_out'
-
+      get 'fill_out/:name/(:code)', :to => 'job_forms#fill_out', :as => 'fill_out'
     end
 
     member do

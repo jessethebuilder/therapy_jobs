@@ -10,8 +10,11 @@
     <div>
       <br>
       <div class="navbar navbar-inverse navbar-fixed-bottom">
-        <p class='pull-right'>
-          <!--toto create controller actions for save -->
+        <p class='centered' style='padding-top: 10px'>
+          <!--toto create controller actions for save -->    .
+           <%= link_to job_form_path(@job_form, :format => :pdf), :class => 'btn btn-info' do %>
+             <span class='glyphicon glyphicon-print'></span> Print
+           <% end %>
            <%= link_to 'Reset', reset_job_form_path(@job_form), :class => 'btn btn-danger' %>
            <%= link_to 'Save', process_job_form_path(@job_form), :class => 'btn btn-warning' %>
            <%= submit_tag('Submit', :class => 'btn btn-primary') %>

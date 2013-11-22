@@ -36,6 +36,14 @@ class JobForm < ActiveRecord::Base
   def source
     @source ||= self.job_form_source
   end
+
+  def form_name
+    name = source.name
+    name += '-'
+    name += "#{@source.category.name}-" if @source.category
+    name += "#{user.first_name.to_s} #{user.last_name.to_s}"
+    name
+  end
   
   def JobForm.for_user(user, name, code, *args)
     find_for_user(user, name, code) || create_for_user(user, name, code, *args)

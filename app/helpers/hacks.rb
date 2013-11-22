@@ -1,7 +1,5 @@
 module Hacks
-
   include ActionView::Helpers::TextHelper
-
 
   def standard_description(job)
     html = "We are currently looking for #{articleator(job.category.name)} for a #{duration_parser(job)} in "
@@ -76,58 +74,4 @@ module Hacks
       end
     end
   end
-
-  #####################################################333333333333333333333333333
-
-  def add_commas_and_ands(collection, separator = ',')
-    #todo this has problems
-
-    str = ''
-    counter = collection.count
-    if counter == 2
-      str += "#{collection[0]} and #{collection[1]}"
-    else
-      collection.each do |item|
-        str += item.to_s
-        str += "#{separator} " if counter > 2
-        str += "#{separator} and " if counter == 2
-        counter -= 1
-      end
-    end
-    str
-  end
-
-  def articleator(word, capitalize = false)
-    capitalize ? article = 'A' : article = 'a'
-    test_word = word.downcase
-    %w|honest honor slp|.each do |an_word|
-      article += 'n' if test_word[(0...an_word.length)] == an_word
-    end
-    article += 'n' if %w|a e i o u|.include?(test_word[0])
-    "#{article} #{word}"
-  end
-
-  def float_to_years_and_months(float)
-    years = Integer(float)
-    decimal_months = float - years
-    months =  Integer((decimal_months * 12).round)
-    str = "#{pluralize(years, 'year')}"
-    str += " and #{pluralize(months, 'month')}" unless months == 0
-    str
-  end
-
-end #Hacks
-
-class Array
-
-  def match_at(regexp_or_string)
-    regexp_or_string.class == String ? regex = eval("/#{regexp_or_string}/") : regex = regexp_or_string
-    counter = 0
-    self.each do |i|
-      return counter if i =~ regex
-      counter += 1
-    end
-    nil
-  end
-
 end
