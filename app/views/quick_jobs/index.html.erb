@@ -1,0 +1,41 @@
+<h1>Listing quick_jobs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Address1</th>
+      <th>Address2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Setting</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quick_jobs.each do |quick_job| %>
+      <tr>
+        <td><%= quick_job.category %></td>
+        <td><%= quick_job.address1 %></td>
+        <td><%= quick_job.address2 %></td>
+        <td><%= quick_job.city %></td>
+        <td><%= quick_job.state %></td>
+        <td><%= quick_job.zip %></td>
+        <td><%= quick_job.setting %></td>
+        <td><%= quick_job.description %></td>
+        <td><%= link_to 'Show', quick_job %></td>
+        <td><%= link_to 'Edit', edit_quick_job_path(quick_job) %></td>
+        <td><%= link_to 'Destroy', quick_job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quick job', new_quick_job_path %>

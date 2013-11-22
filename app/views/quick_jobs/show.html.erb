@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @quick_job.category %>
+</p>
+
+<p>
+  <strong>Address1:</strong>
+  <%= @quick_job.address1 %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @quick_job.address2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @quick_job.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @quick_job.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @quick_job.zip %>
+</p>
+
+<p>
+  <strong>Setting:</strong>
+  <%= @quick_job.setting %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @quick_job.description %>
+</p>
+
+<%= link_to 'Edit', edit_quick_job_path(@quick_job) %> |
+<%= link_to 'Back', quick_jobs_path %>
