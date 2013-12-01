@@ -10,11 +10,7 @@
       </div>
 
       <div class='row'>
-        <blockquote><%= @job.highlight %></blockquote>
-      </div>
-
-      <div class='row'>
-        </p><%= description_parser(@job) %></p>
+        <blockquote><%= description_parser(@job) %></blockquote>
       </div>
 
       <div class='row'>
@@ -36,28 +32,33 @@
         <div class='col-sm-6'>
           <h3>Details:</h3>
           <ul>
+            <li><strong>Job Type: </strong><%= @job.duration_type.titlecase %></li>
             <li><strong>Start Date: </strong><%= @job.start_date.to_formatted_s(:long) %></li>
-            <li><strong>Duration: </strong>Pluralize!!<%#todo= pluralize(@job.duration, 'week') %></li>
+            <li><strong>Duration: </strong><%= duration_parser(@job) %></li>
           </ul>
         </div>
 
         <div class='col-sm-6'>
           <h3>Required Qualifications:</h3>
-          <ul><%#= line_items(requirements_parser(@job)) %></ul>
-            <p>jfx</p>
+          <ul>
+            <%= @job.requirements.to_line_items %>
+          </ul>
         </div>
       </div>
 
       <div class='row'>
         <div class='col-sm-6'>
           <h3>Benefits:</h3>
-          <ul><%= line_items(@job.benefits) %></ul>
+          <ul>
+            <%= @job.benefits.to_line_items %>
+          </ul>
         </div>
 
         <div class='col-sm-6'>
           <h3>Desired Qualifications:</h3>
-          <ul><%#= line_items(desirements_parser(@job)) %></ul>
-          <p>jfx</p>
+          <ul>
+            <%= @job.desirements.to_line_items %>
+          </ul>
         </div>
       </div>
 

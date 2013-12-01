@@ -1,5 +1,6 @@
 module Hacks
   include ActionView::Helpers::TextHelper
+  include StringTools
 
   def standard_description(job)
     html = "We are currently looking for #{articleator(job.category.name)} for a #{duration_parser(job)} in "
@@ -11,12 +12,14 @@ module Hacks
   end
 
   def requirements_parser(job)
-    str = ''
+    arr = job.requirements
     if job.required_experience && job.required_experience > 0
-      str += "#{float_to_years_and_months(job.desired_experience)} in the setting\n"
+      arr << "#{float_to_years_and_months(job.desired_experience)} of experience in the setting\n"
     end
-    str += job.requirements.to_s
-    str
+    html = '<ul>'
+      html += arr.to_line_items
+    html += '</ul>'
+    html.html_safe
   end
 
   def desirements_parser(job)
@@ -59,19 +62,15 @@ module Hacks
     job.description || standard_description(job)
   end
 
-  def duration_parser(job, short = false)
-    if job.duration == 0
-      if short == true
-        return 'Permanent'
-      else
-        return 'direct-hire, permanent position'
-      end
-    else
-      if short == true
-        return 'Contract'
-      else
-        return "#{pluralize(job.duration, 'week')} contract"
-      end
+  def duration_parser(job)
+    case job.duration_type
+      when 'perm'
+        ret = 'Permanent'
+      when 'contract'
+        ret = "#{job.duration} "
+        ret += 'week'.pluralize(job.duration)
     end
+    ret
   end
+
 end

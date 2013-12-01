@@ -1,6 +1,5 @@
 module ApplicationHelper
-#  include FarmTwitterBootstrap
-  #include FarmerTown::HtmlBasics
+  include HtmlTools
 
   def management_position_codes
     arr = CATEGORIES.keys
@@ -40,14 +39,7 @@ module ApplicationHelper
   end
 
 
-  def line_items(items)
-    html = ''
-    collection = items.split("\n")
-    collection.each do |item|
-      html += "<li>#{item}</li>"
-    end
-    html.html_safe
-  end
+
 
   def spacer(pixel_count = 100, float = 'left', options = {})
     html = "<div style='float:"
@@ -70,4 +62,14 @@ module ApplicationHelper
     html
   end
 
+end
+
+class Array
+  def to_line_items
+    html = ''
+    self.each do |item|
+      html += "<li>#{item}</li>"
+    end
+    html.html_safe
+  end
 end

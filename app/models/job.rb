@@ -72,7 +72,6 @@ end
 class Job < ActiveRecord::Base
   include TherapyJobsDotCom
   include CategoriesHelper
-  extend FarmerTown::ActiveRecordHelper
 
   attr_accessor :main_facility
 
@@ -91,7 +90,7 @@ class Job < ActiveRecord::Base
   validates :category, :presence => true
   validates :contact, :presence => true
 
-  acts_like_an_array :acceptable_categories
+  acts_like_an_array :acceptable_categories, :benefits, :requirements, :desirements
 
   #validates :main_facility_id, :presence => true
 

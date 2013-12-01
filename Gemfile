@@ -1,12 +1,12 @@
 source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.1'
 
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
+gem 'sqlite3'
 
-gem "pg", "~> 0.17.0"
+#gem "pg", "~> 0.17.0"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -86,6 +86,7 @@ gem 'prawn'
 
 #gem 'csv-mapper'
 
-gem 'farmer_town', :path => 'C:\Users\jf\Desktop\jesseweb\farmer_town'
+#gem 'farmer_town', :path => 'C:\Users\jf\Desktop\jesseweb\farmer_town'
 
+gem 'farm_tools', :git => 'https://github.com/jessethebuilder/farm_tools'
 #ruby "2.0.0"

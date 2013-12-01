@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" hash="4215935476">
-    <data-source source="LOCAL" name="Rails therapy_jobs: test" product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="e1b5afca-fa5c-4f95-8026-d96388cedb58">
+    <data-source source="LOCAL" name="Rails therapy_jobs: test" uuid="e1b5afca-fa5c-4f95-8026-d96388cedb58">
+      <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:C:\Users\jf\Desktop\jesseweb\therapy_jobs\db\test.sqlite3</jdbc-url>
       <libraries>
@@ -13,10 +14,10 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Rails therapy_jobs: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="98651d13-cb52-414d-a4f1-25b3e7c4a7b3">
+    <data-source source="LOCAL" name="Rails therapy_jobs: development" uuid="98651d13-cb52-414d-a4f1-25b3e7c4a7b3">
+      <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:therapy_jobs_development</jdbc-url>
-      <user-password>dfc2dfdfdfc4dfdedfcfdfd8df92df92</user-password>
+      <jdbc-url>jdbc:sqlite:C:\Users\jf\Desktop\jesseweb\therapy_jobs\db\development.sqlite3</jdbc-url>
       <libraries>
         <library>
           <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/postgresql-driver-license.txt</url>
