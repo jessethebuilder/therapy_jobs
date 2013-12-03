@@ -84,7 +84,7 @@ gem 'whenever', :require => false
 gem 'geocoder'
 gem 'prawn'
 
-#gem 'csv-mapper'
+gem 'csv-mapper'
 
 #gem 'farmer_town', :path => 'C:\Users\jf\Desktop\jesseweb\farmer_town'
 

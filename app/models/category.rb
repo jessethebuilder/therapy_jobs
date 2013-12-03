@@ -15,4 +15,8 @@ class Category < ActiveRecord::Base
     self.where(:code => code)
   end
 
+  def standard?
+    STANDARD_CATEGORIES.include?(self.code) ? true : false
+  end
+
 end

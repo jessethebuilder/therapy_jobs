@@ -20,7 +20,7 @@ class JobsController < ApplicationController
     @address = @job.main_facility.address
 
     @facility = @job.facilities[0]
-    @contact = @facility.contact
+    @contact = @job.contact
     @client = @contact.client
     @jobs = Job.of_this_client(@client)
   end

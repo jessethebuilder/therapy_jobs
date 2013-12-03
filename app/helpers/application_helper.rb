@@ -40,15 +40,13 @@ module ApplicationHelper
 
 
 
+  #todo refactor to FarmTools
 
-  def spacer(pixel_count = 100, float = 'left', options = {})
-    html = "<div style='float:"
-    html += float
-    html += " width:"
-    html += String(pixel_count)
-    html += "'"
-    html += option_hash_to_html(options)
-    html += ">&nbsp;</div>"
+  def developer_note(content)
+    html = '<div class="developer_note">'
+      html += '<strong>Developer Note:</strong> '
+      html += content
+    html += '</div>'
     html.html_safe
   end
 
@@ -65,6 +63,7 @@ module ApplicationHelper
 end
 
 class Array
+  #todo refactor to FarmTools
   def to_line_items
     html = ''
     self.each do |item|

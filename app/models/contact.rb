@@ -10,7 +10,7 @@ class Contact < ActiveRecord::Base
   validates :nickname, :uniqueness => true, :allow_nil => true, :allow_blank => true
   validates :email, :uniqueness => true, :allow_nil => true, :allow_blank => true
 
-  def Contact.find_or_create_by_contact_string(contact_string)
+  def Contact.find_or_create_with_contact_string(contact_string)
     s = contact_string.downcase
     contacts = Contact.where('nickname LIKE ?', s)
     contacts = Contact.where('email LIKE ?', s) if contacts.blank?

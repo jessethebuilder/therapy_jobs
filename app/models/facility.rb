@@ -10,7 +10,7 @@ class Facility < ActiveRecord::Base
   has_one :address, :as => :addressable, :dependent => :destroy
 
   validates :name, :presence => true
-  validates :contact, :presence => true
+  #validates :contact, :presence => true
   validates :setting, :presence => true
 
   validates :address, :presence => true

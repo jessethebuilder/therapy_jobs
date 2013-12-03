@@ -6,7 +6,7 @@ class Client < ActiveRecord::Base
   has_many :addresses, :as => :addressable
 
   validates :name, :presence => true
-  validates :phone, :presence => true
+  #validates :phone, :presence => true
 
   has_attached_file :logo, :styles => {:medium => ['450x450>'], :medium_show => ["250x250>"]}
   validates_attachment_size :logo, :less_than => 1.megabyte

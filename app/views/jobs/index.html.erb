@@ -15,7 +15,7 @@
 
         <div class='col-sm-2'></div>
         <div class='col-sm-2'><%= job.start_date %></div>
-        <div class='col-sm-2'><%= job.duration %> plurn</div>
+        <div class='col-sm-2'><%= duration_parser(job) %></div>
       </div>
     <% end %>
   </div>

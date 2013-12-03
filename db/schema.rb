@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131107224917) do
+ActiveRecord::Schema.define(version: 20131203093722) do
 
   create_table "addresses", force: true do |t|
     t.integer  "addressable_id"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20131107224917) do
     t.integer  "categorization_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "profession"
   end
 
   create_table "categorizations", force: true do |t|
@@ -151,6 +152,7 @@ ActiveRecord::Schema.define(version: 20131107224917) do
     t.integer  "main_facility_id"
     t.string   "duration_type"
     t.string   "acceptable_categories"
+    t.string   "private_description"
   end
 
   create_table "location_searches", force: true do |t|
@@ -164,8 +166,9 @@ ActiveRecord::Schema.define(version: 20131107224917) do
   create_table "quick_jobs", force: true do |t|
     t.string   "cats"
     t.string   "acceptable_cats"
-    t.string   "setting_code"
+    t.string   "setting"
     t.string   "duration_type"
+    t.string   "duration"
     t.string   "street"
     t.string   "street2"
     t.string   "city"
@@ -185,6 +188,7 @@ ActiveRecord::Schema.define(version: 20131107224917) do
     t.text     "aliases"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "setting_clause"
   end
 
   create_table "users", force: true do |t|

@@ -3,8 +3,9 @@ class CreateQuickJobs < ActiveRecord::Migration
     create_table :quick_jobs do |t|
       t.string :cats
       t.string :acceptable_cats
-      t.string :setting_code
+      t.string :setting
       t.string :duration_type
+      t.string :duration
       t.string :street
       t.string :street2
       t.string :city

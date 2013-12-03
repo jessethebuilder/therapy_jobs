@@ -90,9 +90,30 @@ class Job < ActiveRecord::Base
   validates :category, :presence => true
   validates :contact, :presence => true
 
-  acts_like_an_array :acceptable_categories, :benefits, :requirements, :desirements
+  acts_like_an_array :acceptable_categories, :benefits, :requirements, :desirements, :acceptable_categories
 
   #validates :main_facility_id, :presence => true
+
+  def licensed_categories
+    if category.standard?
+      category.name
+    else
+      categories_for_management.to_sentence(:last_word_connector => ', or ')
+    end
+  end
+
+  def categories_for_management
+    arr = []
+    if acceptable_categories == ['all']
+      cats = STANDARD_CATEGORIES
+    else
+      cats = acceptable_categories
+    end
+    cats.each do |c|
+      arr << CATEGORIES[c.downcase][:name]
+    end
+    arr
+  end
 
   def main_facility
     Facility.find(main_facility_id)
@@ -111,6 +132,7 @@ class Job < ActiveRecord::Base
     main_facility.setting.code
   end
 
+
   def client_id=(not_implemented)
     raise NotImplementedError
   end
@@ -119,35 +141,6 @@ class Job < ActiveRecord::Base
     where('client_id = ?', client.id).order("updated_at DESC")
   end
 
-  def normalize_categories
-    self.acceptable_categories = [] if STANDARD_CATEGORIES.include?(category.code)
-  end
-
-  def split_on_acceptable_categories_for_management
-    #returns an array of jobs for publication for job posting boards that only accept the standard categories as required fields
-    #looks for values 'pt, ot, slp, pta, cota, all' in #acceptable_categories. Default is 'pt, ot, slp'
-    these_jobs = []
-    if STANDARD_CATEGORIES.include?(category.code)
-      these_jobs << self
-    else
-      if acceptable_categories.blank?
-        cats = %w|pt ot slp|
-      elsif acceptable_categories == ['all']
-        cats = %|pt ot slp pta cota|
-      else
-        cats = acceptable_categories
-      end
-
-      cats.each do |cat|
-        new_job = self.dup
-        new_job.acceptable_categories = [cat]
-        new_job.category = category
-        new_job.facilities = facilities
-        these_jobs << new_job
-      end
-    end
-    these_jobs
-  end
 
   private
 
