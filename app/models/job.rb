@@ -76,11 +76,10 @@ class Job < ActiveRecord::Base
   attr_accessor :main_facility
 
   belongs_to :contact
-  belongs_to :client
 
   has_many :job_locations
-  has_many :facilities, :after_add => :add_main_facility,
-           :before_remove => :remove_main_facility, :through => :job_locations
+  has_many :facilities, :after_add => :add_main_facility, :before_remove => :remove_main_facility,
+             :through => :job_locations
 
   has_one :categorization
   has_one :category, :through => :categorization
@@ -94,6 +93,10 @@ class Job < ActiveRecord::Base
 
   #validates :main_facility_id, :presence => true
 
+  def client
+    contact.client
+  end
+
   def licensed_categories
     if category.standard?
       category.name
@@ -103,12 +106,16 @@ class Job < ActiveRecord::Base
   end
 
   def categories_for_management
-    arr = []
     if acceptable_categories == ['all']
       cats = STANDARD_CATEGORIES
+    elsif acceptable_categories == ['assistants']
+      cats = %w|pta cota|
+    elsif acceptable_categories == ['therapists']
+      cats = %w|pt ot slp|
     else
       cats = acceptable_categories
     end
+    arr = []
     cats.each do |c|
       arr << CATEGORIES[c.downcase][:name]
     end
@@ -132,13 +139,11 @@ class Job < ActiveRecord::Base
     main_facility.setting.code
   end
 
-
-  def client_id=(not_implemented)
-    raise NotImplementedError
-  end
-
-  def self.of_this_client(client)
-    where('client_id = ?', client.id).order("updated_at DESC")
+  def city_state
+    s = main_facility.address.city.titlecase
+    s += ", "
+    s += main_facility.address.state.upcase
+    s
   end
 
 

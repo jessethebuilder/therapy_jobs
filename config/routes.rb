@@ -37,7 +37,8 @@ TherapyJobs::Application.routes.draw do
 
   resources :jobs do
     member do
-      get 'apply', :to => 'jobs#apply', :as => 'apply'
+      get 'apply_to', :to => 'jobs#apply_to', :as => 'apply_to'
+      get 'inquire', :to => 'jobs#inquire', :as => 'inquire'
       get 'flag', :to => 'jobs#flag', :as => 'flag'
     end
 

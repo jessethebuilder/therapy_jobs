@@ -17,7 +17,7 @@
         <div class='well'>
 
           <!--<p class='pull-right'>-->
-          <%= link_to 'Apply', apply_job_path(@job), :remote => true, :class => 'btn btn-primary' %>
+          <%= link_to 'Apply', apply_to_job_path(@job), :remote => true, :class => 'btn btn-primary' %>
           <%= link_to 'Inquire', '#', class: 'btn btn-default' %>
 
           <%= link_to flag_job_path, :class => 'btn btn-danger pull-right' do %>
@@ -65,31 +65,23 @@
     </div>
 
     <div class='col-md-5 panel col-md-offset-1'>
-      <!--<div class='container'>-->
-        <div class='row'>
-          <% if @job.main_facility.address.geocoded? %>
-            <%= render :partial => 'addresses/map',
-                       :locals => {:address => @job.main_facility.address, :title => @job.main_facility.name, :starting_address => @starting_address} %>
-          <% end %>
-        </div>
 
-        <hr>
+      <div class='row well' style="margin-top:10px">
+        <%= link_to(image_tag(@client.logo.url(:medium_show)), client_path(@client)) unless @client.logo.to_s =~ /missing\.png/ %>
+        <h2><%= link_to @client.name, client_path(@client) %></h2>
 
-        <div class='row'>
-          <%= link_to(image_tag(@client.logo.url(:medium_show)), client_path(@client)) unless @client.logo.to_s =~ /missing\.png/ %>
-          <h2><%= link_to @client.name, client_path(@client) %></h2>
-        </div>
-
-        <div class='row'>
-          <h3><%= "#{@contact.first_name} #{@contact.last_name}" %></h3>
-        </div>
+        <h3><%= "#{@contact.first_name} #{@contact.last_name}" %></h3>
+        <p><%= mail_to @contact.email %><br>
+        <%= @contact.phone %></p>
       </div>
 
-        <div class='row'>
-          <%= render 'job_list' %>
-        </div><!--row-->
-      <!--</div>-->
+      <div class='row'>
+        <% if @job.main_facility.address.geocoded? %>
+          <%= render :partial => 'addresses/map',
+                     :locals => {:address => @job.main_facility.address, :title => @job.main_facility.name, :starting_address => @starting_address} %>
+        <% end %>
+      </div>
     </div>
-
-
+  </div>
 </div>
+

@@ -34,10 +34,7 @@ function makeLinkable(selector, path){
     });
 };
 
-//destroys any element with the id 'tb_modal' when the modal.hidden event fires
-$('#tb_modal').on('hidden.bs.modal', function(){
-    $(this).detach();
-});
+
 
 function submitOnEnter(form_selector){
     $(document).keypress(function(e){

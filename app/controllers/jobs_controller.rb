@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   include ApplicationHelper
-  before_action :set_job, only: [:show, :edit, :update, :destroy, :apply]
+  before_action :set_job, only: [:show, :edit, :update, :destroy, :apply_to]
 
   def tj
     @jobs = Job.all
@@ -17,16 +17,14 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.json
   def show
-    @address = @job.main_facility.address
-
-    @facility = @job.facilities[0]
+    @facility = @job.main_facility
     @contact = @job.contact
-    @client = @contact.client
-    @jobs = Job.of_this_client(@client)
+    @client = @job.client
+    @address = @facility.address
   end
 
-  def apply
-
+  def apply_to
+    session[:applying_for] = @job.id
   end
 
   def flag

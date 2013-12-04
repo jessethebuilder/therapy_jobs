@@ -9,6 +9,7 @@ class Contact < ActiveRecord::Base
 
   validates :nickname, :uniqueness => true, :allow_nil => true, :allow_blank => true
   validates :email, :uniqueness => true, :allow_nil => true, :allow_blank => true
+  validates :client_id, :presence => true
 
   def Contact.find_or_create_with_contact_string(contact_string)
     s = contact_string.downcase

@@ -1,0 +1,29 @@
+<div id='application_modal' class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header" style="background:black; color:white">
+        <button type="button" class="close" style='color:white' data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4><small>Applying For:</small> <%= "#{@job.category.code.upcase} in #{@job.city_state}" %></h4>
+      </div>
+
+      <div class="modal-body">
+        <h3>To complete this application, you will need:</h3>
+        <%= render :partial => 'application_checklist' %>
+      </div>
+
+      <div class="modal-footer">
+        <button type='button' class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= link_to 'Submit Application', '#', :class => 'btn btn-primary' %>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    $('#application_modal').on('hidden.bs.modal', function(){
+        $(this).detach();
+    });
+  </script>
+</div>
+

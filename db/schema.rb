@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131203093722) do
+ActiveRecord::Schema.define(version: 20131203225709) do
 
   create_table "addresses", force: true do |t|
     t.integer  "addressable_id"
@@ -148,7 +148,6 @@ ActiveRecord::Schema.define(version: 20131203093722) do
     t.datetime "updated_at"
     t.boolean  "zip_verified",          default: false
     t.text     "highlight"
-    t.integer  "client_id"
     t.integer  "main_facility_id"
     t.string   "duration_type"
     t.string   "acceptable_categories"
