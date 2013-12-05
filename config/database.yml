@@ -1,23 +1,35 @@
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+#  adapter: sqlite3
+#  database: db/development.sqlite3
+#  pool: 5
+#  timeout: 5000
+
+  adapter: postgresql
+  database: tj_dev
+  username: postgres
+  password: hunter
+  host: localhost
+#  port: 5432
+  encoding: UTF8
   pool: 5
   timeout: 5000
-
-#  adapter: postgresql
-#  encoding: unicode
-#  database: therapy_jobs_dev
-#  pool: 5
-#  port: 5432
-#  password: hunter88
-
-#  password: hunter88
 
 test:
-  adapter: sqlite3
-  database: db/test.sqlite3
+#  adapter: sqlite3
+#  database: db/test.sqlite3
+#  pool: 5
+#  timeout: 5000
+
+  adapter: postgresql
+  database: tj_test
+  username: postgres
+  password: hunter
+  host: localhost
+#  port: 5432
+  encoding: UTF8
   pool: 5
   timeout: 5000
+
 
 production:
   adapter: sqlite3

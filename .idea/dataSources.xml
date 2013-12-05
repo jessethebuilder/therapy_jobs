@@ -4,7 +4,9 @@
     <data-source source="LOCAL" name="Rails therapy_jobs: test" uuid="e1b5afca-fa5c-4f95-8026-d96388cedb58">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\jf\Desktop\jesseweb\therapy_jobs\db\test.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/tj_test</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfc2dfdfdfc4dfdedfcfdfd8</user-password>
       <libraries>
         <library>
           <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/xerial-sqlite-license.txt</url>
@@ -17,7 +19,9 @@
     <data-source source="LOCAL" name="Rails therapy_jobs: development" uuid="98651d13-cb52-414d-a4f1-25b3e7c4a7b3">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\jf\Desktop\jesseweb\therapy_jobs\db\development.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/tj_dev</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfc2dfdfdfc4dfdedfcfdfd8</user-password>
       <libraries>
         <library>
           <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/postgresql-driver-license.txt</url>
