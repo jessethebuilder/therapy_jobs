@@ -1,4 +1,4 @@
-require 'C:\Users\jf\Desktop\jesseweb\therapy_jobs\db\job_form_seed.rb'
+require "#{Rails.root}/db/job_form_seed.rb"
 include JobFormSeed
 
 #Cats and Settings
