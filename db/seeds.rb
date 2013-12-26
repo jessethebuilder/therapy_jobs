@@ -11,7 +11,7 @@ CATEGORIES.each do |k, v|
 end
 
 cl = Client.new(:name => 'Real Therapy Jobs')
-cl.save
+cl.save!
 
 c = Contact.new(
   :first_name => 'Jesse',
@@ -21,7 +21,14 @@ c = Contact.new(
   :phone => '360-670-9312'
   )
 c.client = cl
-c.save
+c.save!
+
+j = Job.new(
+  :duration_type => DURATION_TYPES.keys.sample,
+)
+j.category = Category.where(:code => CATEGORIES.keys.sample)
+j.contact = c
+j.save!
 
 #############Users###################################
 u = User.create(:email => 'test@test.com', :password => 'testtest')

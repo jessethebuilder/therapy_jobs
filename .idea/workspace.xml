@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a198337a-b659-40cf-a501-92488aa84c02" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/job_form_seed.rb" afterPath="$PROJECT_DIR$/db/job_form_seed.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -19,10 +18,10 @@
     <SUITE FILE_PATH="coverage/therapy_jobs@spec.coverage" NAME="spec Coverage Results" MODIFIED="1386632290224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
     <SUITE FILE_PATH="coverage/therapy_jobs@db_migrate__therapy_jobs.coverage" NAME="db:migrate: therapy_jobs Coverage Results" MODIFIED="1386111446488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
     <SUITE FILE_PATH="coverage/therapy_jobs@db_rollback__therapy_jobs.coverage" NAME="db:rollback: therapy_jobs Coverage Results" MODIFIED="1385975921521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
+    <SUITE FILE_PATH="coverage/therapy_jobs@db_reset__therapy_jobs.coverage" NAME="db:reset: therapy_jobs Coverage Results" MODIFIED="1388038132370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
+    <SUITE FILE_PATH="coverage/therapy_jobs@Rails_console__therapy_jobs.coverage" NAME="Rails console: therapy_jobs Coverage Results" MODIFIED="1388038008363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
     <SUITE FILE_PATH="coverage/therapy_jobs@db_seed__therapy_jobs.coverage" NAME="db:seed: therapy_jobs Coverage Results" MODIFIED="1388037404149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
-    <SUITE FILE_PATH="coverage/therapy_jobs@Rails_console__therapy_jobs.coverage" NAME="Rails console: therapy_jobs Coverage Results" MODIFIED="1388036010511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
     <SUITE FILE_PATH="coverage/therapy_jobs@Development__therapy_jobs.coverage" NAME="Development: therapy_jobs Coverage Results" MODIFIED="1388035064041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
-    <SUITE FILE_PATH="coverage/therapy_jobs@db_reset__therapy_jobs.coverage" NAME="db:reset: therapy_jobs Coverage Results" MODIFIED="1386201267265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -36,91 +35,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="factories.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/factories.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2669">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/job_search_criteria/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="62" selection-start="1590" selection-end="1590" vertical-scroll-proportion="-7.8461537" vertical-offset="578" max-vertical-offset="2210">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="24" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1326">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spec_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="16" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="884">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_top_nav.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/parts/_top_nav.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="0" selection-end="1362" vertical-scroll-proportion="0.0" vertical-offset="205" max-vertical-offset="782">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="33" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.0" vertical-offset="806" max-vertical-offset="1462">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="seeds.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="seeds.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="29" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+            <state line="29" column="59" selection-start="691" selection-end="691" vertical-scroll-proportion="1.5873606" vertical-offset="66" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="job_form_seed.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/job_form_seed.rb">
+      <file leaf-file-name="job.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/job.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="71" selection-start="351" selection-end="351" vertical-scroll-proportion="0.39650145" vertical-offset="0" max-vertical-offset="343">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image_uploader.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/uploaders/image_uploader.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="71" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+            <state line="88" column="13" selection-start="2390" selection-end="2390" vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="2873">
               <folding />
             </state>
           </provider>
@@ -195,8 +122,8 @@
         <option value="$PROJECT_DIR$/app/views/job_search_criteria/_form.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/uploaders/image_uploader.rb" />
-        <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/db/job_form_seed.rb" />
+        <option value="$PROJECT_DIR$/db/seeds.rb" />
       </list>
     </option>
   </component>
@@ -443,7 +370,7 @@
       <recent name="C:\Users\jf\Desktop\jesseweb\therapy_jobs\app\views\devise_modal" />
     </key>
   </component>
-  <component name="RunManager" selected="Rake.db:seed: therapy_jobs">
+  <component name="RunManager" selected="Rake.db:reset: therapy_jobs">
     <configuration default="false" name="Rails console: therapy_jobs" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
       <module name="therapy_jobs" />
       <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -738,11 +665,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Rake.db:seed: therapy_jobs" />
+        <item index="0" class="java.lang.String" itemvalue="Rake.db:reset: therapy_jobs" />
         <item index="1" class="java.lang.String" itemvalue="IRB console.Rails console: therapy_jobs" />
-        <item index="2" class="java.lang.String" itemvalue="Rake.db:migrate: therapy_jobs" />
-        <item index="3" class="java.lang.String" itemvalue="Rake.db:rollback: therapy_jobs" />
-        <item index="4" class="java.lang.String" itemvalue="Rake.db:reset: therapy_jobs" />
+        <item index="2" class="java.lang.String" itemvalue="Rake.db:seed: therapy_jobs" />
+        <item index="3" class="java.lang.String" itemvalue="Rake.db:migrate: therapy_jobs" />
+        <item index="4" class="java.lang.String" itemvalue="Rake.db:rollback: therapy_jobs" />
       </list>
     </recent_temporary>
   </component>
@@ -850,7 +777,11 @@
       <created>1388036950898</created>
       <updated>1388036950898</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Pre Beta Deployment to Heroku&#10;">
+      <created>1388037449420</created>
+      <updated>1388037449420</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -878,8 +809,8 @@
     <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32702702" sideWeight="0.5797941" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6024259" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32614556" sideWeight="0.5797941" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6024259" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32837838" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5733591" order="8" side_tool="false" content_ui="tabs" />
@@ -888,7 +819,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4117647" sideWeight="0.888125" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47439352" sideWeight="0.88767654" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47439352" sideWeight="0.88767654" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32837838" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1079,11 +1010,6 @@
         <state line="2" column="45" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/job.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="13" selection-start="2097" selection-end="2097" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1700" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/client.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="20" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442" />
@@ -1211,16 +1137,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+    <entry file="file://$PROJECT_DIR$/db/job_form_seed.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="29" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+        <state line="8" column="71" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/job_form_seed.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/job.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="71" selection-start="351" selection-end="351" vertical-scroll-proportion="0.39650145" vertical-offset="0" max-vertical-offset="343">
+        <state line="88" column="13" selection-start="2390" selection-end="2390" vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="2873">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="59" selection-start="691" selection-end="691" vertical-scroll-proportion="1.5873606" vertical-offset="66" max-vertical-offset="799">
           <folding />
         </state>
       </provider>
