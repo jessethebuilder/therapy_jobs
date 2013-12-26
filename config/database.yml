@@ -13,7 +13,6 @@ development:
   encoding: UTF8
   pool: 5
   timeout: 5000
-
 test:
 #  adapter: sqlite3
 #  database: db/test.sqlite3

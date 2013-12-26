@@ -10,7 +10,7 @@
       </div>
 
       <div class='row'>
-        <blockquote><%= @job.description.html_safe %></blockquote>
+        <blockquote><%= @job.description.to_s.html_safe %></blockquote>
       </div>
 
       <div class='row'>

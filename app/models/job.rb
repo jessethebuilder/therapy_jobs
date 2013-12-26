@@ -73,6 +73,8 @@ class Job < ActiveRecord::Base
   include TherapyJobsDotCom
   include CategoriesHelper
 
+  has_one :address, :as => :addressable
+
   attr_accessor :main_facility
 
   belongs_to :contact
@@ -91,6 +93,7 @@ class Job < ActiveRecord::Base
 
   acts_like_an_array :acceptable_categories, :benefits, :requirements, :desirements, :acceptable_categories
 
+  #todo this is important. needs to validate that a facility exists
   #validates :main_facility_id, :presence => true
 
   def client
