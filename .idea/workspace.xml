@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a198337a-b659-40cf-a501-92488aa84c02" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/job_search_criteria/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/job_search_criteria/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/parts/_hero_unit_alpha.html.erb" afterPath="$PROJECT_DIR$/app/views/parts/_hero_unit_alpha.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/parts/_top_nav.html.erb" afterPath="$PROJECT_DIR$/app/views/parts/_top_nav.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/jobs/index.html.erb" afterPath="$PROJECT_DIR$/app/views/jobs/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -70,7 +66,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/jobs/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="102" selection-start="65" selection-end="65" vertical-scroll-proportion="-0.073913045" vertical-offset="102" max-vertical-offset="1241">
+            <state line="4" column="18" selection-start="39" selection-end="92" vertical-scroll-proportion="0.09855072" vertical-offset="0" max-vertical-offset="901">
               <folding />
             </state>
           </provider>
@@ -811,7 +807,11 @@
       <created>1388045604101</created>
       <updated>1388045604101</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Pre Beta Deployment to Heroku&#10;">
+      <created>1388051387349</created>
+      <updated>1388051387349</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1189,13 +1189,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/parts/_hero_unit_alpha.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="19" selection-start="43" selection-end="43" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="561">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/parts/_top_nav.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="63" selection-start="202" selection-end="202" vertical-scroll-proportion="-2.3461537" vertical-offset="92" max-vertical-offset="782">
@@ -1203,9 +1196,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/parts/_hero_unit_alpha.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="19" selection-start="43" selection-end="43" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="561">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/jobs/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="102" selection-start="65" selection-end="65" vertical-scroll-proportion="-0.073913045" vertical-offset="102" max-vertical-offset="1241">
+        <state line="4" column="18" selection-start="39" selection-end="92" vertical-scroll-proportion="0.09855072" vertical-offset="0" max-vertical-offset="901">
           <folding />
         </state>
       </provider>

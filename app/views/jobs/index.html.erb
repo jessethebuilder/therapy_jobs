@@ -1,8 +1,8 @@
 <style>
   #all_jobs{
-      margin: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      /*margin: 20px;*/
+      /*padding-top: 20px;*/
+      /*padding-bottom: 20px;*/
       /*border-radius: 15px;*/
       /*-moz-border-radius: 15px;*/
       /*border: solid 2px rgba(0, 0, 0, 0.24);*/
@@ -11,6 +11,7 @@
       margin: 5px;
       border: solid 1px black;
       border-radius: 10px;
+      -moz-border-radius: 10px;
       padding: 10px;
   }
 </style>
@@ -20,46 +21,25 @@
 <% end %>
 
 <div id='all_jobs' class='container'>
-  <div class='col-md-12'>
-    <% @jobs.each do |job| %>
+  <% @jobs.each do |job| %>
     <% @job_address = job.main_facility.address %>
-      <div id='<%= job.id %>' class='job_row'>
-        <div class="row">
-          <div class='col-md-4'>
-            <strong><%= job.category.name %></strong> (<%= DURATION_TYPES[job.duration_type][:name].downcase %>)
-          </div><!--col-->
+    <div id='<%= job.id %>' class='job_row row'>
+      <div class="col-md-4">
+        <strong><%= job.category.name %></strong> (<%= DURATION_TYPES[job.duration_type][:name].downcase %>)
+      </div><!--col-->
 
-          <div class="col-md-4">
-            <%= "#{@job_address.city}, #{job.main_facility.address.state.upcase }" %> -
-            <%= job.main_facility.setting.name %>
-          </div>
+      <div class="col-md-4">
+        <%= "#{@job_address.city}, #{job.main_facility.address.state.upcase }" %> -
+        <%= job.main_facility.setting.name %>
+      </div><!--col-->
 
-          <div class='col-md-4'>
-            <strong>Start date:</strong> <%= job.start_date %>
-          </div><!--col-->
-        </div><!--row-->
+      <div class="col-md-4">
+        <strong>Start date:</strong> <%= job.start_date %>
+      </div><!--col-->
+    </div><!--row-->
+  <% end %>
+</div><!--container-->
 
-        <div class="row">
-          <div class="col-md-4">
-
-          </div><!--col-->
-          <div class="col-md-4">
-
-          </div><!--col-->
-          <div class="col-md-4">
-
-          </div><!--col-->
-        </div><!--row-->
-        <div class='col-sm-2'></div>
-
-        <div class="hidden-md"></div>
-
-        <div class='col-sm-2'>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
 
 <script type='text/javascript'>
     $(document).ready(function(){
