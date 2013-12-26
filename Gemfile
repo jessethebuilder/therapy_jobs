@@ -36,9 +36,9 @@ group :doc do
 end
 
 
-
-group :test, :development do
   gem 'faker'
+group :test, :development do
+
   gem 'rspec-rails'
   gem 'wdm'
   gem 'database_cleaner', '~> 1.0.0rc'
