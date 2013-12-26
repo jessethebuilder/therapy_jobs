@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a198337a-b659-40cf-a501-92488aa84c02" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20131203060140_add_private_description_to_job.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20131203072031_add_setting_clause_to_setting.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20131203093722_add_profession_to_category.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20131203225709_remove_client_id_from_job.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/job_search_criteria/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/job_search_criteria/_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="therapy_jobs.iws" />
@@ -16,12 +19,13 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/therapy_jobs@spec.coverage" NAME="spec Coverage Results" MODIFIED="1386632290224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
     <SUITE FILE_PATH="coverage/therapy_jobs@db_migrate__therapy_jobs.coverage" NAME="db:migrate: therapy_jobs Coverage Results" MODIFIED="1386111446488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
     <SUITE FILE_PATH="coverage/therapy_jobs@db_rollback__therapy_jobs.coverage" NAME="db:rollback: therapy_jobs Coverage Results" MODIFIED="1385975921521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
-    <SUITE FILE_PATH="coverage/therapy_jobs@db_seed__therapy_jobs.coverage" NAME="db:seed: therapy_jobs Coverage Results" MODIFIED="1386200734775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
-    <SUITE FILE_PATH="coverage/therapy_jobs@db_reset__therapy_jobs.coverage" NAME="db:reset: therapy_jobs Coverage Results" MODIFIED="1386201267265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
-    <SUITE FILE_PATH="coverage/therapy_jobs@Rails_console__therapy_jobs.coverage" NAME="Rails console: therapy_jobs Coverage Results" MODIFIED="1386201307400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
+    <SUITE FILE_PATH="coverage/therapy_jobs@Rails_console__therapy_jobs.coverage" NAME="Rails console: therapy_jobs Coverage Results" MODIFIED="1386651884809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
     <SUITE FILE_PATH="coverage/therapy_jobs@Development__therapy_jobs.coverage" NAME="Development: therapy_jobs Coverage Results" MODIFIED="1386201529266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
+    <SUITE FILE_PATH="coverage/therapy_jobs@db_reset__therapy_jobs.coverage" NAME="db:reset: therapy_jobs Coverage Results" MODIFIED="1386201267265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
+    <SUITE FILE_PATH="coverage/therapy_jobs@db_seed__therapy_jobs.coverage" NAME="db:seed: therapy_jobs Coverage Results" MODIFIED="1386200734775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="therapy_jobs" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -35,48 +39,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/jobs/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="50" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1581">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="jobs_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/jobs_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="44" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1700">
+            <state line="16" column="15" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1700">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_apply_to.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/jobs/_apply_to.html.erb">
+      <file leaf-file-name="factories.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/factories.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="3" selection-start="997" selection-end="997" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="595">
-              <folding>
-                <marker date="1386140239304" expanded="true" signature="93:994" placeholder="..." />
-                <marker date="1386140239304" expanded="true" signature="122:867" placeholder="..." />
-                <marker date="1386140239304" expanded="true" signature="154:858" placeholder="..." />
-                <marker date="1386140239304" expanded="true" signature="196:225" placeholder="..." />
-                <marker date="1386140239304" expanded="true" signature="226:466" placeholder="..." />
-                <marker date="1386140239304" expanded="true" signature="279:290" placeholder="..." />
-                <marker date="1386140239304" expanded="true" signature="498:631" placeholder="..." />
-                <marker date="1386140239304" expanded="true" signature="665:846" placeholder="..." />
-                <marker date="1386140239304" expanded="true" signature="879:987" placeholder="..." />
-                <marker date="1386140239304" expanded="true" signature="941:974" placeholder="{...}" />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2669">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/job_search_criteria/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="62" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.6415094" vertical-offset="578" max-vertical-offset="2210">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="624" selection-end="653" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1462">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="24" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1326">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spec_helper.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="28" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="884">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_top_nav.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/parts/_top_nav.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="18" selection-start="0" selection-end="1362" vertical-scroll-proportion="0.0" vertical-offset="205" max-vertical-offset="782">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="62" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.7983425" vertical-offset="493" max-vertical-offset="1496">
+            <state line="39" column="0" selection-start="960" selection-end="1247" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1530">
               <folding />
             </state>
           </provider>
@@ -85,25 +123,7 @@
       <file leaf-file-name="database.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="19" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="278" max-vertical-offset="748">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rake" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/rake">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="170">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_application_checklist.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/jobs/_application_checklist.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="32" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+            <state line="23" column="19" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="748">
               <folding />
             </state>
           </provider>
@@ -175,6 +195,9 @@
         <option value="$PROJECT_DIR$/app/views/jobs/_apply_to.html.erb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/db/migrate/20131106045834_remove_polymorphic_from_category.rb" />
+        <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/job_search_criteria/_form.html.erb" />
       </list>
     </option>
   </component>
@@ -259,39 +282,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="environments" />
+              <option name="myItemId" value="spec" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -331,7 +322,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jobs" />
+              <option name="myItemId" value="parts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -353,7 +344,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="addresses" />
+              <option name="myItemId" value="job_search_criteria" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -403,47 +394,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="therapy_jobs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -479,7 +430,7 @@
       <recent name="C:\Users\jf\Desktop\jesseweb\therapy_jobs\app\views\devise_modal" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.Development: therapy_jobs">
+  <component name="RunManager" selected="IRB console.Rails console: therapy_jobs">
     <configuration default="false" name="Rails console: therapy_jobs" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
       <module name="therapy_jobs" />
       <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -866,7 +817,15 @@
       <created>1386201891484</created>
       <updated>1386201891484</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Pre Beta Deployment to Heroku&#10;">
+      <created>1386227642594</created>
+      <updated>1386227642594</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Pre Beta Deployment to Heroku&#10;">
+      <created>1386228350838</created>
+      <updated>1386228350838</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -899,11 +858,11 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5733591" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27477476" sideWeight="0.522973" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29011554" sideWeight="0.522973" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4117647" sideWeight="0.888125" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47567567" sideWeight="0.11196911" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47567567" sideWeight="0.8880309" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47446236" sideWeight="0.11196911" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47567567" sideWeight="0.8880309" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32837838" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -936,7 +895,8 @@
     <MESSAGE value="Updates" />
     <MESSAGE value="Updates&#10;" />
     <MESSAGE value="Pre Beta Deployment to Heroku" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pre Beta Deployment to Heroku" />
+    <MESSAGE value="Pre Beta Deployment to Heroku&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pre Beta Deployment to Heroku&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -959,31 +919,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/helpers/hacks_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="90" selection-start="1267" selection-end="1267" vertical-scroll-proportion="1.3948718" vertical-offset="0" max-vertical-offset="1088" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/factories.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2669" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/helpers/categories_helper_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/job_forms_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="371" selection-end="371" vertical-scroll-proportion="0.65384614" vertical-offset="0" max-vertical-offset="2006" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/job_search_criteria/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1042" selection-end="1042" vertical-scroll-proportion="-22.884615" vertical-offset="0" max-vertical-offset="2210" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/job_search_criteria_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="22" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1598" />
@@ -1022,11 +957,6 @@
     <entry file="file://C:/Ruby193/lib/ruby/gems/1.9.1/bundler/gems/farm_tools-0265c7cd37fc/lib/farm_tools/string_tools.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="25" selection-start="851" selection-end="851" vertical-scroll-proportion="0.50769234" vertical-offset="278" max-vertical-offset="680" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/parts/_top_nav.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="4" selection-start="1350" selection-end="1350" vertical-scroll-proportion="-24.846153" vertical-offset="0" max-vertical-offset="782" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20131009215010_create_addresses.rb">
@@ -1114,11 +1044,6 @@
         <state line="99" column="29" selection-start="2518" selection-end="2601" vertical-scroll-proportion="0.0" vertical-offset="1394" max-vertical-offset="2108" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="20" selection-start="1533" selection-end="1538" vertical-scroll-proportion="-23.192308" vertical-offset="519" max-vertical-offset="1326" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130802021320_create_jobs.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="6" selection-start="163" selection-end="163" vertical-scroll-proportion="0.14285715" vertical-offset="0" max-vertical-offset="714" />
@@ -1142,11 +1067,6 @@
     <entry file="file://$PROJECT_DIR$/db/migrate/20131203225709_remove_client_id_from_job.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="45" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0952381" vertical-offset="544" max-vertical-offset="1462" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/job.rb">
@@ -1176,9 +1096,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/jobs/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="50" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1581">
-          <folding />
-        </state>
+        <state line="68" column="50" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1581" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
@@ -1188,53 +1106,90 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <folding />
-        </state>
+        <state line="3" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/jobs/_application_checklist.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="32" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="688">
-          <folding />
-        </state>
+        <state line="0" column="32" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="688" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/jobs/_apply_to.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="3" selection-start="997" selection-end="997" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="595">
-          <folding>
-            <marker date="1386140239304" expanded="true" signature="93:994" placeholder="..." />
-            <marker date="1386140239304" expanded="true" signature="122:867" placeholder="..." />
-            <marker date="1386140239304" expanded="true" signature="154:858" placeholder="..." />
-            <marker date="1386140239304" expanded="true" signature="196:225" placeholder="..." />
-            <marker date="1386140239304" expanded="true" signature="226:466" placeholder="..." />
-            <marker date="1386140239304" expanded="true" signature="279:290" placeholder="..." />
-            <marker date="1386140239304" expanded="true" signature="498:631" placeholder="..." />
-            <marker date="1386140239304" expanded="true" signature="665:846" placeholder="..." />
-            <marker date="1386140239304" expanded="true" signature="879:987" placeholder="..." />
-            <marker date="1386140239304" expanded="true" signature="941:974" placeholder="{...}" />
-          </folding>
+        <state line="29" column="0" selection-start="997" selection-end="997" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="595" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20131106045834_remove_polymorphic_from_category.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="4" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="960" selection-end="1247" vertical-scroll-proportion="0.0" vertical-offset="571" max-vertical-offset="1530">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/jobs_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="44" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
+        <state line="16" column="15" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1700">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="19" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="278" max-vertical-offset="748">
+        <state line="23" column="19" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="62" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.7983425" vertical-offset="493" max-vertical-offset="1496">
+        <state line="16" column="0" selection-start="624" selection-end="653" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="24" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1326">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="28" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/parts/_top_nav.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="18" selection-start="0" selection-end="1362" vertical-scroll-proportion="0.0" vertical-offset="205" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="603">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/factories.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2669">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/job_search_criteria/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="62" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.6415094" vertical-offset="578" max-vertical-offset="2210">
           <folding />
         </state>
       </provider>
