@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
-ruby '1.9.3'
+
 
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
@@ -61,14 +61,8 @@ gem 'paperclip'
 gem 'carrierwave'
 #gem 'rmagick-win32'
 
-#gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-#    :github => 'anjlab/bootstrap-rails',
-#    :branch => '3.0.0'
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
-
-#gem 'farm_address', :path => 'C:\Users\jf\Desktop\jesseweb\farm_address'
-#gem 'farm_twitter_bootstrap', :path => 'C:\Users\jf\Desktop\jesseweb\farm_twitter_bootstrap'
 
 gem 'whenever', :require => false
 
@@ -82,3 +76,5 @@ gem 'farm_tools', :git => 'https://github.com/jessethebuilder/farm_tools'
 group :production do
   gem 'rails_12factor'
 end
+
+ruby '2.0.0'
