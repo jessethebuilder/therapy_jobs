@@ -35,8 +35,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'faker'
 
-  gem 'faker'
 group :test, :development do
 
   gem 'rspec-rails'
