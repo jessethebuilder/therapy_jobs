@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
+gem 'rails', '4.0.2'
 
 
 # Use sqlite3 as the database for Active Record
@@ -42,6 +42,7 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'wdm'
   gem 'database_cleaner', '~> 1.0.0rc'
+  #gem 'win32console'
 end
 
 group :test do
@@ -72,6 +73,7 @@ gem 'prawn'
 gem 'csv-mapper'
 
 gem 'farm_tools', :git => 'https://github.com/jessethebuilder/farm_tools'
+gem 'twitter_express', :git => 'https://github.com/jessethebuilder/TwitterExpress'
 
 group :production do
   gem 'rails_12factor'

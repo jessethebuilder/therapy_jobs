@@ -1,124 +1,64 @@
-<div id='job_search' class='well'>
-  <style>
-      #job_search{
-          position: fixed;
-          top: 50px;
-          width: 100%;
-          z-index: 999;
-          overflow-y: scroll;
-          overflow-x: hidden;
-          height: 100%;
-          display: none;
-          padding-bottom: 50px;
-      }
-      body{
-          overflow-y: hidden;
-      }
-
-
-  </style>
-
-  <div class='container'>
-    <div id='close_button margin_right' class='row'>
-      <% unless current_jsc.new_record? %>
-        <%= link_to 'Reset Search', job_search_criterion_path(current_jsc), :method => :delete,:class => 'btn btn-danger btn-sm' %>
-      <% end %>
-      <button type='button' class='close pull-right'>close &times;&nbsp;&nbsp; </button>
-    </div>
-
+<%= express_modal '<h2>Search for Jobs<h2>'.html_safe, nil, true do %>
+  <div class='job_search'>
     <%= form_for @job_search_criterion, :id => 'job_search_form', :role => 'form' do |f| %>
-      <div class='row'>
-        <h3>Search Options</h3>
-
-        <div class='form-group col-md-4'>
-          <h4>Professions</h4>
-          <!-- todo 'Any' should be highlighted if no option is selected -->
-          <%= f.select :categories, for_select(Category.standard, :name, :code, @job_search_criterion.categories), {},
-                       {:size => '5', :class => 'form-control', :multiple => true} %>
-
-          <div class='checkbox'>
-            <%= f.check_box :include_management %>
-            <%= f.label :include_management, 'Include management positions?' %>
-          </div>
-        </div>
-
-        <div class='form-group col-md-3'>
-          <h4>Settings</h4>
-          <%= f.select :settings, for_select(Setting.all, :name, :code, @job_search_criterion.settings), {:include_blank => 'Any'},
-                       {:size => '5', :class => 'form-control', :multiple => true} %>
-        </div>
-
-
-        <div class='form-group col-md-3'>
-          <h4>Position&nbsp;Types</h4>
-          <%= f.select :duration_types, options_for_select(DURATION_TYPES, @job_search_criterion.duration_types), {:include_blank => 'Any'},
-                                                      {:size => 5, :class => 'form-control', :multiple => true} %>
-        </div>
-
-        <div class='form-group col-md-2'>
-          <h4>States</h4>
-          <%= f.select :states, states_for_select(@job_search_criterion.states), {:include_blank => 'Any'},
-                       {:size => '5', :class => 'form-control', :multiple => true} %>
-        </div>
-      </div>
-
-
-      <%= f.fields_for "location_searches[]", LocationSearch.new do |loc| %>
-        <%= loc.fields_for :address do |addr| %>
-
-          <div id='location_search' class='row'>
-            <h3>Add a specific location to search<small></small></h3>
-
-            <div id='search_radius_div' class='form-group col-md-2'>
-              <%= loc.label :search_radius, 'Search radius', :class => 'sr-only' %>
-              <%= loc.text_field :search_radius, :id => 'search_radius', :class => 'form-control', :placeholder => 'Miles' %>
-            </div>
-
-            <div class='form-group col-md-1'>
-              <p class='form-control-static centered'><strong>from</strong></p>
-            </div>
-
-            <div id='address_string_div' class='form-group col-md-3'>
-              <%= addr.label :address_string, 'Address', :class => 'sr-only' %>
-              <%= addr.text_field :address_string, :id => 'address_string', :class => 'form-control',
-                                                   :placeholder => 'City, ST -or- Zip' %>
-            </div>
-
-            <div class='form-group col-md-2'>
-              <%= link_to 'Add Location', radius_search_location_searches_path, :remote => true,
-                                                    :id => 'add_location', :class => 'btn btn-warning' %>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <%= f.label :categories, :'Job Fields' %>
+            <%= f.select :categories,
+                         options_for_select(STANDARD_CATEGORIES.collect{ |cat| [CATEGORIES[cat][:profession], cat]},
+                                            @job_search_criterion.categories),
+                         {}, {:size => '5', :class => 'form-control', :multiple => true} %>
+            <div class='checkbox'>
+              <%= f.check_box :include_management %>
+              <%= f.label :include_management, 'Include management positions?' %>
             </div>
           </div>
-        </div>
+        </div><!--col-->
 
-        <% end #addr %>
-      <% end #loc %>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <%= f.label :duration_types, 'Position types' %>
+            <%= f.select :duration_types,
+                         options_for_select(DURATION_TYPES.values.collect{ |v| v[:name].titlecase }, @job_search_criterion.duration_types),
+                         {:include_blank => 'Any'},
+                         {:size => 4, :class => 'form-control', :multiple => true} %>
+          </div>
+        </div><!--col-->
+      </div><!--row-->
 
-        <div class='row'>
-          <div class='col-md-10'></div>
-          <div class='form-group col-md-2 margin_right'>
+      <div class="row">
+        <div class='col-sm-6'>
+          <div class="form-group">
+            <%= f.label :settings, 'Desired Settings' %>
+            <%= f.select :settings, for_select(Setting.all, :name, :code, @job_search_criterion.settings), {:include_blank => 'Any'},
+                       {:size => '5', :class => 'form-control', :multiple => true} %>
+          </div>
+        </div><!--col-->
+
+        <div class='col-sm-6'>
+          <div class="form-group">
+            <%= f.label :states, 'States' %>
+            <%= f.select :states, states_for_select(@job_search_criterion.states), {:include_blank => 'Any'},
+                         {:size => '5', :class => 'form-control', :multiple => true} %>
+          </div>
+        </div><!--col-->
+      </div><!--row-->
+
+
+
+       <div class='row'>
+        <div class='col-sm-12'>
+          <div class='form-group'>
             <%= f.submit 'Search', :class => 'form-control btn btn-primary' %>
           </div>
-        </div>
+        </div><!--col-->
+      </div><!--row-->
     <% end #form %>
 
-  <script>
-      submitOnEnter('<%= "##{jsc_form_link}" %>');
-      linkBuilder('#add_location', ['#address_string', '#search_radius']);
+    <%= render :partial => 'location_searches/for_job_search_criterion',
+                   :locals => {:form_target => [@job_search_criterion, LocationSearch.new]} %>
 
-      $('#job_search_toggle').click(function(e){
-          e.preventDefault();
-          $('<%= "##{jsc_form_link}" %>').submit();
-      });
-      $(document).ajaxComplete(function(){
-          $('#top_nav_body').collapse('hide');
-          $('#job_search').show(250);
-      });
-      $('.close').click(function(){
-          $('#job_search').hide(250, function(){
-            $('#job_search').detach();
-          });
-      });
-    </script>
+    </div><!--row-->
   </div><!--container-->
-</div>
+<% end #modal %>

@@ -21,8 +21,8 @@ class JobSearchCriteriaController < ApplicationController
 
   def create
     @job_search_criterion = JobSearchCriterion.new(job_search_criterion_params)
+
     if @job_search_criterion.save
-      save_location_search(params)
       session[:jsc_id] = @job_search_criterion.id
 
       respond_to do |format|
@@ -37,8 +37,7 @@ class JobSearchCriteriaController < ApplicationController
 
   def update
     if @job_search_criterion.update(job_search_criterion_params)
-      save_location_search(params)
-      redirect_to jobs_path
+     redirect_to jobs_path
     else
       raise StandardError, 'do it!!!'
     end
@@ -72,18 +71,4 @@ class JobSearchCriteriaController < ApplicationController
     #params.require(:job_search_criterion).permit(:categories, :include_management, {:states => []}, :settings,
     #                                             :location_searches_attributes => [:search_radius, :address_attributes])
   end
-
-  def save_location_search(params)
-    unless params[:job_search_criterion][:location_searches].first[:address_attributes][:address_string].blank?
-      @location_search = @job_search_criterion.location_searches.new(params[:job_search_criterion][:location_searches].first)
-      addr = params[:job_search_criterion][:location_searches].first[:address_attributes][:address_string]
-      @location_search.address.address_string = addr
-      @location_search.save
-      @location_search.address.save
-      true
-    else
-      false
-    end
-  end
-
 end

@@ -1,0 +1,21 @@
+<%= form_for [@job_search_criterion, LocationSearch.new], :remote => true do |location_fields| %>
+    <div class="col-sm-3">
+      <div class="form-group">
+        <%= location_fields.number_field :search_radius, :class => 'form-control',
+                                       :step => 5, :placeholder => 'Miles' %>
+      </div>
+    </div><!--col-->
+
+    <%= location_fields.fields_for :address do |addr| %>
+        <div class="col-sm-5">
+          <div class="form-group">
+            <%= addr.text_field :address_string, :class => 'form-control', :placeholder => 'Enter (city, st) or (zip code)' %>
+          </div>
+        </div><!--col-->
+    <% end #address %>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <%= location_fields.submit 'Save Search', :class => 'form-control btn btn-success' %>
+      </div>
+    </div><!--col-->
+<% end #location_search %>
