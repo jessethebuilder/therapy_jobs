@@ -35,12 +35,10 @@ module ApplicationHelper
     else
       jsc = nil
     end
-    jsc || JobSearchCriterion.new
+    ret = jsc || JobSearchCriterion.create
+    session[:jsc_id] = ret.id
+    ret
   end
-
-
-
-  #todo refactor to FarmTools
 
   def developer_note(content)
     html = '<div class="developer_note">'
@@ -63,7 +61,6 @@ module ApplicationHelper
 end
 
 class Array
-  #todo refactor to FarmTools
   def to_line_items
     html = ''
     self.each do |item|

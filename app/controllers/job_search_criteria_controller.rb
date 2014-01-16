@@ -68,7 +68,5 @@ class JobSearchCriteriaController < ApplicationController
   def job_search_criterion_params
     params.require(:job_search_criterion).permit({:categories => []}, {:states => []}, {:settings => []}, {:duration_types => []},
                    :include_management, :location_searches_attributes => [:search_radius, :address_attributes])
-    #params.require(:job_search_criterion).permit(:categories, :include_management, {:states => []}, :settings,
-    #                                             :location_searches_attributes => [:search_radius, :address_attributes])
   end
 end

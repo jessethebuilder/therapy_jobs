@@ -4,8 +4,14 @@
       <h2><%= pluralize(@facility.errors.count, "error") %> prohibited this facility from being saved:</h2>
 
       <ul>
+        <script>
+
+        </script>
       <% @facility.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
+
+
+
       <% end %>
       </ul>
     </div>
